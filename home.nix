@@ -15,6 +15,8 @@
   home.file = {
     ".config/sway/config".source = ./config/sway/config;
 
+    ".config/waybar".source = ./config/waybar;
+
     ".config/tofi/config".source = ./config/tofi/config;
 
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
