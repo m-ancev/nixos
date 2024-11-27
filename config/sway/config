@@ -179,7 +179,6 @@ client.unfocused       	$dray     $black   $dray    $dray       $dray
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
 # bar {
 #     position top
 #
@@ -194,5 +193,8 @@ client.unfocused       	$dray     $black   $dray    $dray       $dray
 #         inactive_workspace $black $black $dray
 #     }
 # }
+bar {
+    swaybar_command waybar
+}
 
 include /etc/sway/config.d/*
