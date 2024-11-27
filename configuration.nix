@@ -105,6 +105,9 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    waybar
+    nil # language server
+    gnome-system-monitor
     home-manager
     cargo
     xfce.mousepad
