@@ -20,7 +20,6 @@
     ".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
 
     ".config/nvim".source = ./config/nvim;
-    ".config/nvim/lazy-lock.json".enable = false;
 
     ".tmux.conf".source = ./config/tmux/.tmux.conf;
   };
