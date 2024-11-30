@@ -10,6 +10,63 @@ in
     inputs.home-manager.nixosModules.default
   ];
 
+  # List packages installed in system profile.
+  environment.systemPackages = with pkgs; [
+    brave
+    killall
+    libnotify
+    libreoffice
+    discord
+    waybar
+    nil # language server
+    gnome-system-monitor
+    home-manager
+    cargo
+    xfce.mousepad
+    adwaita-icon-theme
+    mullvad-vpn
+    neovim
+    wget
+    git
+    firefox
+    kitty
+    tldr
+    keepassxc
+    obsidian
+    syncthing
+    unzip
+    ripgrep
+    htop
+    btop
+    tmux
+    thunderbird
+    lazygit
+    tree
+    tofi
+    iwd
+    fzf
+    sublime-merge
+    nautilus
+    udiskie
+    python3
+    lua
+    lua-language-server
+    tree-sitter
+    fd
+    gnumake
+    gcc
+    luajitPackages.luarocks
+    python311Packages.pip
+    nodejs_22
+    grim
+    slurp
+    wl-clipboard
+    mako
+    swaylock-effects
+    pavucontrol  # GUI for volume control
+    pamixer      # CLI for volume control
+  ];
+
   # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -103,57 +160,6 @@ in
     XCURSOR_SIZE = "13";
   };
 
-  # List packages installed in system profile.
-  environment.systemPackages = with pkgs; [
-    waybar
-    nil # language server
-    gnome-system-monitor
-    home-manager
-    cargo
-    xfce.mousepad
-    adwaita-icon-theme
-    mullvad-vpn
-    neovim
-    wget
-    git
-    firefox
-    kitty
-    tldr
-    keepassxc
-    obsidian
-    syncthing
-    unzip
-    ripgrep
-    htop
-    btop
-    tmux
-    thunderbird
-    lazygit
-    tree
-    tofi
-    iwd
-    fzf
-    sublime-merge
-    nautilus
-    udiskie
-    python3
-    lua
-    lua-language-server
-    tree-sitter
-    fd
-    gnumake
-    gcc
-    luajitPackages.luarocks
-    python311Packages.pip
-    nodejs_22
-    grim
-    slurp
-    wl-clipboard
-    mako
-    swaylock-effects
-    pavucontrol  # GUI for volume control
-    pamixer      # CLI for volume control
-  ];
 
   services.gnome.gnome-keyring.enable = true;
   
@@ -161,10 +167,6 @@ in
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraSessionCommands = ''
-      export XCURSOR_THEME=adwaita-icon-theme
-      export XCURSOR_SIZE=13
-    '';
   };
 
   # kanshi systemd service
@@ -177,7 +179,10 @@ in
   };
 
   # Set up Font
-  fonts.packages = [ pkgs.jetbrains-mono ];
+  fonts.packages = with pkgs; [ 
+    jetbrains-mono 
+    nerdfonts
+  ];
 
   system.stateVersion = "24.05";
 }
