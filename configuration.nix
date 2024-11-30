@@ -15,6 +15,7 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    baobab
     gnome-tweaks
     libsForQt5.qt5ct
     gnome-themes-extra
