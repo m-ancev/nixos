@@ -10,6 +10,9 @@ in
     inputs.home-manager.nixosModules.default
   ];
 
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     brave
@@ -148,7 +151,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = "ma";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "vboxusers"];
   };
 
   # Allow unfree packages
