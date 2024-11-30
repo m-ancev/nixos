@@ -173,9 +173,11 @@ set $gray #999999
 set $dray #333333
 
 # class                	border    backgr   text     indicator   child_border
-client.focused        	$gray     $black   $gray    $gray       $gray
-client.unfocused       	$dray     $black   $dray    $dray       $dray
+# client.focused        	$gray     $black   $gray    $gray       $gray
+# client.unfocused       	$dray     $black   $dray    $dray       $dray
 
+client.focused        	$white    $black  $white  $white    $white
+client.unfocused       	$dray     $black   $dray    $dray       $dray
 #
 # Status Bar:
 #
