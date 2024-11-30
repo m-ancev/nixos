@@ -15,6 +15,8 @@
   home.file = {
     ".config/sway/config".source = ./config/sway/config;
 
+    ".config/mako/config".source = ./config/mako/config;
+
     ".config/waybar".source = ./config/waybar;
 
     ".config/tofi/config".source = ./config/tofi/config;
