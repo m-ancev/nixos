@@ -71,8 +71,8 @@ in
     wl-clipboard
     mako
     swaylock-effects
-    pavucontrol  # GUI for volume control
-    pamixer      # CLI for volume control
+    pavucontrol
+    pamixer
   ];
 
   # Home Manager

@@ -38,13 +38,13 @@ gaps inner 0
 smart_borders on
 
 ### Output configuration
-output * bg /home/ma/Downloads/101516.jpg fill
+output * bg ~/Downloads/101516.jpg fill
 
 ### Auto Mounting
 exec udiskie
 
 ### Screenshots
-bindsym $mod+Shift+s exec grim
+bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
 
 #
 # Example configuration:
