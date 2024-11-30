@@ -15,6 +15,9 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    dzen2
+    qbittorrent
+    lm_sensors
     brave
     killall
     libnotify
