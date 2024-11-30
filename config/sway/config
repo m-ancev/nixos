@@ -198,8 +198,5 @@ client.unfocused       	$dray     $black   $dray    $dray       $dray
 #         inactive_workspace $black $black $dray
 #     }
 # }
-bar {
-    swaybar_command waybar
-}
 
 include /etc/sway/config.d/*
