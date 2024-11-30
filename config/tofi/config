@@ -319,25 +319,27 @@
 	# within each other.
 	# include = /path/to/config
 
-# dmenu config
-anchor = top
-width = 100%
+anchor = center
+width = 20%
 height = 30
+height = 30%
 horizontal = true
+horizontal = false
 font-size = 13
 prompt-text = "> "
-font = monospace
 outline-width = 0
 border-width = 0
 background-color = #000000
 min-input-width = 120
 result-spacing = 15
-padding-top = 2
-padding-bottom = 0
-padding-left = 0
-padding-right = 0
+padding-top = 1%
+padding-bottom = 1%
+padding-left = 1% 
+padding-right = 1%
 font = "JetBrains Mono Bold"
-text-color = #333333
-input-color = #999999
-prompt-color = #999999
-selection-color = #999999
+text-color = #555555
+input-color = #ffffff
+prompt-color = #ffffff
+selection-color = #ffffff
+border-width = 1
+border-color = #ffffff
