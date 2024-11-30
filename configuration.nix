@@ -15,6 +15,7 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    vlc
     jq
     dzen2
     qbittorrent
@@ -23,7 +24,7 @@ in
     killall
     libnotify
     libreoffice
-    discord
+    discord-canary
     waybar
     nil # language server
     gnome-system-monitor
@@ -133,6 +134,7 @@ in
   nix = {
     settings = {
       auto-optimise-store = true;
+      warn-dirty = false;
       experimental-features = [ 
         "nix-command" 
         "flakes" 
@@ -170,7 +172,7 @@ in
 
   services.gnome.gnome-keyring.enable = true;
   
-  # Set up Sway
+  # Sway
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
@@ -185,10 +187,9 @@ in
     };
   };
 
-  # Set up Font
+  # Font
   fonts.packages = with pkgs; [ 
     jetbrains-mono 
-    nerdfonts
   ];
 
   system.stateVersion = "24.05";
