@@ -43,6 +43,9 @@ smart_borders off
 ### Auto Mounting
 exec udiskie
 
+### Screenshots
+bindsym $mod+Shift+s exec grim
+
 #
 # Example configuration:
 #
