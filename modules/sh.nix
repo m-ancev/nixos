@@ -3,7 +3,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      reb = "cd /home/ma/nixos/ && sudo nixos-rebuild switch --flake .";
+      reb = "pushd /home/ma/nixos/ && sudo nixos-rebuild switch --flake . && popd";
       conf = "nvim /home/ma/nixos/";
       nv = "nvim";
       tm = "tmux";
