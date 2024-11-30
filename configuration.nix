@@ -15,6 +15,7 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    jq
     dzen2
     qbittorrent
     lm_sensors
