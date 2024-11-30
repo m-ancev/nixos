@@ -15,6 +15,9 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    gnome-tweaks
+    libsForQt5.qt5ct
+    gnome-themes-extra
     vlc
     jq
     dzen2
@@ -167,6 +170,8 @@ in
   environment.variables = {
     XCURSOR_THEME = "adwaita-icon-theme";
     XCURSOR_SIZE = "13";
+    GTK_THEME = "Adwaita-dark";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
 
