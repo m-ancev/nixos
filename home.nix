@@ -26,6 +26,8 @@
     ".config/nvim".source = ./config/nvim;
 
     ".tmux.conf".source = ./config/tmux/.tmux.conf;
+
+    "wallpapers/".source = ./config/wallpapers;
   };
 
   home.stateVersion = "24.05";

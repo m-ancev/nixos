@@ -38,7 +38,7 @@ gaps inner 0
 smart_borders on
 
 ### Output configuration
-output * bg ~/Downloads/101516.jpg fill
+output * bg ~/wallpapers/101516.jpg fill
 
 ### Auto Mounting
 exec udiskie
