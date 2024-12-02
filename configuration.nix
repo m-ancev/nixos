@@ -15,6 +15,9 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    celluloid
+    zathura
+    swayimg
     baobab
     gnome-tweaks
     libsForQt5.qt5ct
