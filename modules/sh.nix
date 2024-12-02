@@ -9,5 +9,12 @@
       tm = "tmux";
       esudo = "sudo -Es";
     };
+    initExtra = ''
+      if [ "$EUID" -eq 0 ]; then
+          export PS1="\[\e[31m\]\n> \[\e[0m\]"
+      else
+          export PS1="\[\e[37m\]\n> \[\e[0m\]"
+      fi
+    '';
   };
 }
