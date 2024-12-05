@@ -15,6 +15,7 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    wayland-utils
     celluloid
     zathura
     swayimg
@@ -31,7 +32,6 @@ in
     killall
     libnotify
     libreoffice
-    discord-canary
     waybar
     nil # language server
     gnome-system-monitor
@@ -54,7 +54,6 @@ in
     htop
     btop
     tmux
-    thunderbird
     lazygit
     tree
     tofi
@@ -89,7 +88,10 @@ in
   };
 
   # Bootloader
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.devices = [ "nodev" ];
+  boot.loader.grub.useOSProber = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
@@ -114,15 +116,18 @@ in
     LC_TIME = "de_DE.UTF-8";
   };
 
+  # Keyboard
+  services.xserver.xkb.layout = "us,de";
+
   # Sound
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
+    # alsa.enable = true;
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
   };
-  hardware.alsa.enablePersistence = true;
+  # hardware.alsa.enablePersistence = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;

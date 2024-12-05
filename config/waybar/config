@@ -1,0 +1,8 @@
+{
+  "modules-right": ["battery"],
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "threshold-discharge": 20
+  }
+}
