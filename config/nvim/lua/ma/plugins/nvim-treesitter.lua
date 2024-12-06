@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	config = function()
+	config = function(_, opts)
 		require'nvim-treesitter.configs'.setup {
 			auto_install = true,
 			highlight = {
@@ -15,10 +15,12 @@ return {
 				end,
 				additional_vim_regex_highlighting = false,
 			},
-			require("nvim-treesitter.install").prefer_git = true
-			require("nvim-treesitter.install").compilers = { "clang", "gcc" }
-			---@diagnostic disable-next-line: missing-fields
-			require("nvim-treesitter.configs").setup(opts)
 		}
+
+		require("nvim-treesitter.install").prefer_git = true
+		require("nvim-treesitter.install").compilers = { "clang", "gcc" }
+		---@diagnostic disable-next-line: missing-fields
+		require("nvim-treesitter.configs").setup(opts)
 	end
+
 }
