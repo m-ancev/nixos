@@ -203,7 +203,7 @@ in
 
   # Font
   fonts.packages = with pkgs; [ 
-    jetbrains-mono 
+    nerd-fonts.jetbrains-mono 
   ];
 
   system.stateVersion = "24.05";
