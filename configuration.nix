@@ -15,6 +15,8 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    playerctl
+    wayland-utils
     celluloid
     zathura
     swayimg
