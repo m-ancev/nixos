@@ -199,9 +199,13 @@ in
   };
 
   # Font
-  fonts.packages = with pkgs; [ 
-    nerd-fonts.jetbrains-mono 
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    fontconfig.enable = true;
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+    ];
+  };
 
   system.stateVersion = "24.05";
 }
