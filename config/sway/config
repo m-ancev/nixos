@@ -193,19 +193,8 @@ client.unfocused       	$dray     $black   $dray    $dray       $dray
 #
 # Status Bar:
 #
-# bar {
-#     position top
-#
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-#
-#     colors {
-#         statusline $gray
-#         background $black
-#         focused_workspace $black $black $gray
-#         inactive_workspace $black $black $dray
-#     }
-# }
+bar {
+  swaybar_command waybar
+}
 
 include /etc/sway/config.d/*

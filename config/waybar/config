@@ -1,0 +1,32 @@
+{
+  "modules-left": [],
+  "modules-center": [ "clock" ],
+    
+  "modules-right": [ "bluetooth", "pulseaudio", "battery" ],
+
+  "spacing": 10,
+
+  "battery": {
+    "format": " {capacity}% {icon} ",
+    "format-icons": ["", "", "", "", ""],
+    "threshold-discharge": 20
+  },
+
+  "pulseaudio": {
+    "format": " 󰕾  ",
+    "format-muted": " 󰖁  ",
+    "format-bluetooth": " 󰕾  ",
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "format": " 󰂲 ",
+    "format-connected": "  ",
+    "format-icons": {
+        "enabled": "",
+        "disabled": ""
+    },
+    "on-click": "blueman-manager"
+  }
+}
