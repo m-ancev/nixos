@@ -12,3 +12,4 @@ require("lazy").setup("ma.plugins", {
       notify = false,
     },
 })
+vim.cmd.colorscheme(vim.g.colorscheme)

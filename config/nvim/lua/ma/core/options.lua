@@ -1,6 +1,5 @@
---
--- [ General ]
---
+-- Set colorscheme
+vim.g.colorscheme = "cyberdream"
 
 -- Enable Terminal GUI colors
 vim.opt.termguicolors = true

@@ -1,8 +1,3 @@
---
--- [ Keymaps ]
---
-
---  See `:help vim.keymap.set()`
 -- Oil Explorer
 vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { desc = "Toggle Oil [E]xplorer" })
 
