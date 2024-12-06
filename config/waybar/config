@@ -1,5 +1,5 @@
 {
-  "modules-left": [],
+  "modules-left": [ "sway/workspaces" ],
   "modules-center": [ "clock" ],
     
   "modules-right": [ "bluetooth", "pulseaudio", "battery" ],
@@ -28,5 +28,9 @@
         "disabled": ""
     },
     "on-click": "blueman-manager"
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
   }
 }
