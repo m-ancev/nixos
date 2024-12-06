@@ -1,8 +1,33 @@
 {
-  "modules-right": ["battery"],
+  "modules-left": [],
+  "modules-center": [ "clock" ],
+    
+  "modules-right": [ "bluetooth", "pulseaudio", "battery" ],
+
+  "spacing": 20,
+
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{capacity}% {icon} ",
     "format-icons": ["", "", "", "", ""],
     "threshold-discharge": 20
+  },
+
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "format-muted": " Muted",
+    "format-bluetooth": "   {desc}: {volume}%",
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "format": "󰂲 ",
+    "format-connected": " ",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "format-icons": {
+        "enabled": "",
+        "disabled": ""
+    },
+    "on-click": "blueman-manager"
   }
 }
