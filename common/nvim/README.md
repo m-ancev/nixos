@@ -2,20 +2,6 @@
 
 ## Installation
 
-### Linux
-
-Dependencies
-
-```bash
-sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
-```
-
-Clone
-
-```bash
-git clone git@github.com:m-ancev/ma.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
-
 ### Windows
 
 Dependencies
@@ -31,7 +17,3 @@ Clone
 ```powershell
 git clone https://github.com/m-ancev/ma.nvim.git %userprofile%\AppData\Local\nvim\
 ```
-## Structure
-
-![structure.svg](./misc/structure.svg)
-
