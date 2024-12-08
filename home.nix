@@ -1,16 +1,9 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    ./modules/sh.nix
-  ];
+  imports = [];
 
   home.username = "ma";
   home.homeDirectory = "/home/ma";
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    TERM = "kitty";
-  };
 
   home.file = {
     ".config/sway/config".source = ./config/sway/config;
@@ -26,6 +19,10 @@
     ".config/nvim".source = ./config/nvim;
 
     ".tmux.conf".source = ./config/tmux/.tmux.conf;
+
+    ".bashrc".source = ./config/bash/.bashrc;
+
+    ".bash_profile".source = ./config/bash/.bash_profile;
 
     "wallpapers/".source = ./config/wallpapers;
   };
