@@ -3,7 +3,7 @@ export EDITOR='nvim'
 export TERM='kitty'
 
 # aliases
-alias conf='nvim /home/ma/nixos/'
+alias conf='nvim /home/$USER/nixos/'
 alias esudo='sudo -Es'
 alias nv=nvim
 alias reb='pushd /home/ma/nixos/ && sudo nixos-rebuild switch --flake . && popd'

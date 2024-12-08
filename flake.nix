@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration flake";
+  description = "NixOS configuration flake for tower and laptop";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -8,25 +8,40 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
-  let
-    system = "x86_64-linux";
-    lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
+  {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [ 
-          ./hardware-configuration.nix
-          ./configuration.nix 
+      # Configuration for Tower
+      tower = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./tower/hardware-configuration.nix
+          ./tower/configuration.nix
+        ];
+        specialArgs = { inherit inputs; };
+      };
+
+      # Configuration for Laptop
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./laptop/hardware-configuration.nix
+          ./laptop/configuration.nix
         ];
         specialArgs = { inherit inputs; };
       };
     };
+
     homeConfigurations = {
-      ma = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
+      # Home Manager configuration for Tower
+      towerUser = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ ./tower/home.nix ];
+      };
+
+      # Home Manager configuration for Laptop
+      laptopUser = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ ./laptop/home.nix ];
       };
     };
   };
