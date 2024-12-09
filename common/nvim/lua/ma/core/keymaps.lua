@@ -9,9 +9,11 @@ vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Open buffer next", 
 vim.keymap.set("n", "<leader><S-Tab>", ":bprev<CR>", { desc = "Open buffer previous", noremap = true, silent = true })
 vim.keymap.set("n", "<leader>k", ":bd<CR>", { desc = "[k]ill buffer", noremap = true, silent = true })
 
+-- Format buffer
+vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, { desc = "Format buffer" })
+
 -- Bufferline keymaps
 vim.keymap.set("n", "gb", ":BufferLinePick<CR>", { desc = "Toggle BufferLinePick", noremap = true, silent = true })
-
 
 -- Clear highlight search on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
