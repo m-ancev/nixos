@@ -53,8 +53,12 @@ bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Screenshots/screenshot-$(date +%Y
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Set refresh rate and resolution
-output HDMI-A-1 mode 1920x1080@240Hz
+### Monitor
+output eDP-1 scale 1.2
+
+### Brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 ### Sound
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -64,6 +68,12 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+### Touchpad
+input type:touchpad {
+  tap enabled
+  natural_scroll enabled
+}
 
 ### Key bindings
 #
@@ -90,6 +100,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
     # Rebind CAPS to ESC
     input * xkb_options caps:escape
+
+    # Set keyboard layout
+    input * xkb_layout de
 #
 # Moving around:
 #
