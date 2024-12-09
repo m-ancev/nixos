@@ -12,13 +12,6 @@ vim.keymap.set("n", "<leader>k", ":bd<CR>", { desc = "[k]ill buffer", noremap = 
 -- Bufferline keymaps
 vim.keymap.set("n", "gb", ":BufferLinePick<CR>", { desc = "Toggle BufferLinePick", noremap = true, silent = true })
 
--- Copilot Chat
-vim.keymap.set(
-	"n",
-	"<leader>C",
-	":CopilotChatToggle<CR>",
-	{ desc = "Toggle [C]opilotChat", noremap = true, silent = true }
-)
 
 -- Clear highlight search on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
