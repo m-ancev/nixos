@@ -160,7 +160,6 @@ input type:touchpad {
     bindsym $mod+F1 splith
     bindsym $mod+F2 splitv
 
-    # bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
@@ -198,9 +197,6 @@ set $gray #999999
 set $dray #333333
 
 # class                	border    backgr   text     indicator   child_border
-# client.focused        	$gray     $black   $gray    $gray       $gray
-# client.unfocused       	$dray     $black   $dray    $dray       $dray
-
 client.focused        	$white    $black  $white  $white    $white
 client.unfocused       	$dray     $black   $dray    $dray       $dray
 #
