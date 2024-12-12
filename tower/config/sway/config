@@ -29,7 +29,7 @@ bindsym $mod+Shift+Tab workspace prev;
 bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Control+Shift+Alt+p exec --no-startup-id kitty -e poweroff
 bindsym $mod+Control+Shift+Alt+r exec --no-startup-id kitty -e reboot
-bindsym $mod+b exec firefox
+bindsym $mod+b exec pkill -USR1 waybar && swaymsg reload
 
 # Window Decorations
 title_align center
