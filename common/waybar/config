@@ -73,10 +73,10 @@
     },
     "network": {
         "format-wifi": "   ",
-        "format-ethernet": "⬇{bandwidthDownBytes} ⬆{bandwidthUpBytes}",
+        "format-ethernet": " 󰌗  ",
         "interval": 1,
-        "format": "UP",
-        "format-disconnected": "DOWN",
+        "format": "   ",
+        "format-disconnected": " 󰜺  ",
         "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
