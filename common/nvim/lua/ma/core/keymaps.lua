@@ -1,9 +1,14 @@
 -- Oil Explorer
 vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { desc = "Toggle Oil [E]xplorer" })
 
--- Write keymap
+-- Write All
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "[W]rite All" })
 
+-- Write Quit All
+vim.keymap.set("n", "<leader>q", ":wqa<CR>", { desc = "Write [Q]uit All" })
+
+-- Force Quit
+vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force [Q]uit" })
 
 -- Alpha Start Page
 vim.keymap.set("n", "<leader>a", ":Alpha<CR>", { desc = "Toggle [A]lpha" })
@@ -26,7 +31,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>E", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>z", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Toggle background color
 vim.keymap.set("n", "<leader>Tl", "<cmd>set background=light<CR>", { desc = "[T]heme [l]ight" })
