@@ -13,7 +13,6 @@ in
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
-  # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
