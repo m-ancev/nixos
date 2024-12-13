@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{  pkgs, inputs, ... }:
 
 let
   user = "ma";
@@ -15,74 +15,75 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-    amberol
-    playerctl
-    wayland-utils
-    celluloid
-    zathura
-    swayimg
-    baobab
-    gnome-tweaks
-    libsForQt5.qt5ct
-    gnome-themes-extra
-    vlc
-    jq
-    dzen2
-    qbittorrent
-    lm_sensors
-    brave
-    killall
-    libnotify
-    libreoffice
-    discord-canary
-    waybar
-    nil # language server
-    gnome-system-monitor
-    home-manager
-    cargo
-    xfce.mousepad
-    adwaita-icon-theme
-    mullvad-vpn
-    neovim
-    wget
-    git
-    firefox
-    kitty
-    tldr
-    keepassxc
-    obsidian
-    syncthing
-    unzip
-    ripgrep
-    htop
-    btop
-    tmux
-    thunderbird
-    lazygit
-    tree
-    tofi
-    iwd
-    fzf
-    sublime-merge
-    nautilus
-    udiskie
-    python3
-    lua
-    lua-language-server
-    tree-sitter
-    fd
-    gnumake
-    gcc
-    luajitPackages.luarocks
-    python311Packages.pip
-    nodejs_22
-    grim
-    slurp
-    wl-clipboard
-    mako
-    swaylock-effects
-    pavucontrol
-    pamixer
+      iwgtk # GUI front-end for iwd (Wi-Fi daemon)
+      amberol # Simple, modern, and opinionated music player
+      playerctl # Control media players via the command line (for media keys in sway)
+      wayland-utils # Utilities for Wayland (like wayland-info, etc.)
+      celluloid # GUI front-end for MPV (GNOME-based minimal media player)
+      zathura # Minimal and lightweight PDF (and other formats) viewer
+      swayimg # Minimal image viewer for Wayland/sway
+      baobab # Disk usage analyzer (GNOME app)
+      gnome-tweaks # Tool to adjust advanced GNOME desktop settings
+      libsForQt5.qt5ct # Qt5 configuration tool (to set themes, fonts, etc.)
+      gnome-themes-extra # Additional GNOME themes (icons, UI themes)
+      vlc # Versatile, cross-platform multimedia player
+      jq # Command-line JSON processor
+      dzen2 # Lightweight, customizable status bar
+      qbittorrent # BitTorrent client with a nice GUI
+      lm_sensors # Tools for monitoring CPU/GPU temperatures, fan speeds, etc.
+      brave # Privacy-focused web browser based on Chromium
+      killall # Command-line tool to terminate processes by name
+      libnotify # Library for sending desktop notifications
+      libreoffice # Full-featured office suite (writer, calc, impress, etc.)
+      discord-canary # Experimental/preview version of the Discord chat client
+      waybar # Highly customizable Wayland bar (e.g. for sway)
+      nil # Language server for the NIL programming language (if applicable)
+      gnome-system-monitor # System monitoring GUI tool (resources, processes)
+      home-manager # Nix-based user configuration tool (manages dotfiles and user packages)
+      cargo # Rust package manager and build tool
+      xfce.mousepad # Lightweight graphical text editor for the Xfce desktop
+      adwaita-icon-theme # Default GNOME icon theme
+      mullvad-vpn # VPN client for Mullvad VPN service
+      neovim # Modernized, Vim-based text editor
+      wget # Command-line tool for retrieving files from the web
+      git # Distributed version control system
+      firefox # Mozilla’s open-source web browser
+      kitty # Fast, GPU-accelerated terminal emulator
+      tldr # Simplified and community-driven man pages
+      keepassxc # Cross-platform password manager (KeePass-compatible)
+      obsidian # Note-taking and knowledge base app with Markdown
+      syncthing # Continuous file synchronization between devices
+      unzip # Extracts files from ZIP archives
+      ripgrep # Fast command-line search tool (like grep, but faster)
+      htop # Interactive process viewer for the terminal
+      btop # A resource monitor with a modern, colorful UI (CPU, RAM, etc.)
+      tmux # Terminal multiplexer, allows multiple sessions/panes in one terminal
+      thunderbird # Mozilla’s email, news, and calendar client
+      lazygit # Terminal UI for git commands
+      tree # Displays directory trees in the terminal
+      tofi # A minimalistic application launcher for Wayland
+      iwd # iNet Wireless Daemon for managing Wi-Fi on Linux
+      fzf # Command-line fuzzy finder (useful for interactive searching)
+      sublime-merge # A GUI Git client (by the makers of Sublime Text)
+      nautilus # GNOME’s default file manager
+      udiskie # Automounter for removable media in Linux
+      python3 # Python 3 interpreter
+      lua # Lua scripting language interpreter
+      lua-language-server # Language server for Lua (code completion, linting)
+      tree-sitter # Parser generator tool and incremental parsing library
+      fd # User-friendly alternative to ‘find’ (faster and easier syntax)
+      gnumake # Tool for controlling the generation of executables (Make)
+      gcc # GNU C/C++ compiler
+      luajitPackages.luarocks # Package manager for Lua modules (with LuaJIT support)
+      python311Packages.pip # Python package installer (for Python 3.11)
+      nodejs_22 # JavaScript runtime (Node.js) version 22
+      grim # Screenshot utility for Wayland
+      slurp # Select a region in a Wayland compositor (used with grim)
+      wl-clipboard # Command-line copy/paste utilities for Wayland
+      mako # Wayland notification daemon
+      swaylock-effects # A customizable fork of swaylock for locking the screen
+      pavucontrol # GUI volume control for PulseAudio
+      pamixer # Command-line tool to control PulseAudio volumes
   ];
 
   # Home Manager
