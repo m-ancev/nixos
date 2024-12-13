@@ -23,19 +23,18 @@ font pango:JetBrains Mono Bold 13
 seat * xcursor_theme Adwaita 13
 
 # Program Bindings
-bindsym $mod+x exec swaylock --screenshots --clock --datestr %Y-%m-%d --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 9x9 --ring-color 333333 --key-hl-color 999999 --line-color 00000000 --inside-color 000000 --separator-color 00000000 --text-color 999999 --grace 0 --fade-in 0 --font JetBrainsMono
+bindsym $mod+x exec swaylock --screenshots --clock --datestr %Y-%m-%d --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 9x9 --ring-color 333333 --key-hl-color FFFFFF --line-color 00000000 --inside-color 000000 --separator-color 00000000 --text-color FFFFFF --grace 0 --fade-in 0 --font "JetBrainsMono Nerd Font"
 bindsym $mod+Tab workspace next;
 bindsym $mod+Shift+Tab workspace prev;
 bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Control+Shift+Alt+p exec --no-startup-id kitty -e poweroff
 bindsym $mod+Control+Shift+Alt+r exec --no-startup-id kitty -e reboot
-bindsym $mod+b exec pkill -USR1 waybar && swaymsg reload
 
 # Window Decorations
-title_align center
 default_border pixel 1
 gaps inner 0
 smart_borders on
+for_window [floating] border pixel 1
 
 ### Output configuration
 output * bg ~/wallpapers/nms.jpg fill
