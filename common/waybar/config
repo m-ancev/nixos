@@ -13,6 +13,7 @@
         "network",
         "pulseaudio",
         "bluetooth",
+        "backlight",
         "battery",
     ],
     "tray": {
@@ -65,14 +66,14 @@
     },
     "custom/vpn": {
         "tooltip": false,
-        "format": " VPN {} ",
+        "format": " VPN {}  ",
         "exec": "mullvad status | grep -q 'Connected' && echo '' || echo ''",
         "interval": 1,
         "on-click": "mullvad connect",
         "on-click-right": "mullvad disconnect"
     },
     "network": {
-        "format-wifi": "   ",
+        "format-wifi": " 󰖩  ",
         "format-ethernet": " 󰌗  ",
         "interval": 1,
         "format": "   ",
