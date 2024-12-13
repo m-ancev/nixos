@@ -13,7 +13,15 @@ return {
       },
     },
     config = function()
-      require("lspconfig").lua_ls.setup {}
+      local servers = {
+        "lua_ls",
+        "nil_ls",
+        -- add more servers here
+      }
+
+      for _, lsp in ipairs(servers) do
+        require("lspconfig")[lsp].setup({})
+      end
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
