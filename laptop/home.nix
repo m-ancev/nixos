@@ -8,7 +8,7 @@
   home.file = {
     ".config/sway/config".source = ./config/sway/config;
 
-    ".config/waybar".source = ./config/waybar;
+    ".config/waybar".source = ../common/waybar;
 
     ".config/mako/config".source = ../common/mako/config;
 

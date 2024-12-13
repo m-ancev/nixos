@@ -15,6 +15,7 @@ in
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+    amberol
     playerctl
     wayland-utils
     celluloid
