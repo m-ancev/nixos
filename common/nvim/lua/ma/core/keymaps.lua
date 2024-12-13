@@ -1,6 +1,10 @@
 -- Oil Explorer
 vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { desc = "Toggle Oil [E]xplorer" })
 
+-- Write keymap
+vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "[W]rite All" })
+
+
 -- Alpha Start Page
 vim.keymap.set("n", "<leader>a", ":Alpha<CR>", { desc = "Toggle [A]lpha" })
 
