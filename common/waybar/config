@@ -83,7 +83,8 @@
     },
     "bluetooth": {
       "format": " 󰂲  ",
-      "format-connected": "   ",
+      "format-on": "   ",
+      "format-connected": " 󰂱  ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
