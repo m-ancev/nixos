@@ -27,9 +27,6 @@ return {
 			{ "<leader>T", group = "[T]heme" },
 			{ "<leader>T_", hidden = true },
 
-			{ "<leader>h", group = "Git [H]unk" },
-			{ "<leader>h_", hidden = true },
-
 			{ "<leader>n", group = "[N]o" },
 			{ "<leader>n_", hidden = true },
 		})
