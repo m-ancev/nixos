@@ -190,6 +190,14 @@ in
     wrapperFeatures.gtk = true;
   };
 
+  # Steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
   # kanshi systemd service
   systemd.user.services.kanshi = {
     description = "kanshi daemon";
