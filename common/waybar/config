@@ -1,5 +1,5 @@
 {
-    "height": 17,
+    "height": 21,
     "spacing": 5,
     "modules-left": [
         "sway/workspaces",
@@ -9,7 +9,6 @@
     ],
     "modules-right": [
         "tray",
-        "custom/vpn",
         "network",
         "pulseaudio",
         "bluetooth",
@@ -17,9 +16,9 @@
         "battery",
     ],
     "tray": {
-      "icon-size": 13,
+      "icon-size": 15,
       "show-passive-items": true,
-      "spacing": 5
+      "spacing": 20,
     },
     "sway/workspaces": {
       "disable-scroll": true,
@@ -65,29 +64,21 @@
         "tooltip-format": "{volume}%",
         "on-click": "pavucontrol"
     },
-    "custom/vpn": {
-        "tooltip": false,
-        "format": " VPN {}  ",
-        "exec": "mullvad status | grep -q 'Connected' && echo '' || echo ''",
-        "interval": 1,
-        "on-click": "mullvad connect",
-        "on-click-right": "mullvad disconnect"
-    },
     "network": {
-        "format-wifi": " 󰖩  ",
-        "format-ethernet": " 󰌗  ",
+        "format-wifi": "  󰖩  ",
+        "format-ethernet": "  󰌗  ",
         "interval": 1,
-        "format": "   ",
-        "format-disconnected": " 󰜺  ",
+        "format": "    ",
+        "format-disconnected": "  󰜺  ",
         "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
         "on-click": "iwgtk",
     },
     "bluetooth": {
-      "format": " 󰂲  ",
-      "format-on": "   ",
-      "format-connected": " 󰂱  ",
+      "format": " 󰂲 ",
+      "format-on": "  ",
+      "format-connected": " 󰂱 ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
