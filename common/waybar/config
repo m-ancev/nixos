@@ -1,4 +1,5 @@
 {
+    "position": "bottom",
     "height": 21,
     "spacing": 5,
     "modules-left": [
