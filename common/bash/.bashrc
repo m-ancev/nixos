@@ -13,8 +13,7 @@ alias tm=tmux
 
 # terminal prompt
 if [ "$EUID" -eq 0 ]; then
-    export PS1="\[\e[31m\]\n> \[\e[0m\]"
+    export PS1="\n\[\e[31m\]\w\n> \[\e[0m\]"
 else
-    export PS1="\[\e[37m\]\n> \[\e[0m\]"
+    export PS1="\n\[\e[37m\]\w\n> \[\e[0m\]"
 fi
-
