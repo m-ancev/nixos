@@ -19,13 +19,13 @@ return {
   },
   config = function()
     require("telescope").setup({
-      defaults = {
+      defaults = require("telescope.themes").get_ivy({
         borderchars = {
           prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
           results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
           preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
         },
-      },
+      }),
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
