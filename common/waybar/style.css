@@ -16,7 +16,26 @@ button {
 }
 
 #workspaces button {
-    padding: 0 8px;
+  padding: 0 8px;
+  color: #FFFFFF;
+}
+
+#workspaces button.active {
+  color: #FFFFFF;
+}
+
+#workspaces button.focused {
+  color: #FFFFFF;
+}
+
+#workspaces button.urgent {
+	background:  rgba(255, 200, 0, 0.35);
+  color: #FF0000;
+}
+
+#workspaces button:hover {
+  background: #000000;
+	color: #FFFFFF;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
