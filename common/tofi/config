@@ -319,13 +319,14 @@
 	# within each other.
 	# include = /path/to/config
 
-font = "JetBrainsMono Nerd Font Mono"
+font = "JetBrainsMono Nerd Font"
+font-variations = "Bold"
 font-size = 10
 anchor = top
 height = 21
 width = 100%
 horizontal = true
-prompt-text = "> "
+prompt-text = " > "
 font = monospace
 outline-width = 0
 border-width = 0
