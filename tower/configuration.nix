@@ -22,12 +22,8 @@ in
       zathura # Minimal and lightweight PDF (and other formats) viewer
       swayimg # Minimal image viewer for Wayland/sway
       baobab # Disk usage analyzer (GNOME app)
-      gnome-tweaks # Tool to adjust advanced GNOME desktop settings
-      libsForQt5.qt5ct # Qt5 configuration tool (to set themes, fonts, etc.)
-      gnome-themes-extra # Additional GNOME themes (icons, UI themes)
       vlc # Versatile, cross-platform multimedia player
       jq # Command-line JSON processor
-      dzen2 # Lightweight, customizable status bar
       qbittorrent # BitTorrent client with a nice GUI
       lm_sensors # Tools for monitoring CPU/GPU temperatures, fan speeds, etc.
       brave # Privacy-focused web browser based on Chromium
@@ -51,10 +47,8 @@ in
       tldr # Simplified and community-driven man pages
       keepassxc # Cross-platform password manager (KeePass-compatible)
       obsidian # Note-taking and knowledge base app with Markdown
-      syncthing # Continuous file synchronization between devices
       unzip # Extracts files from ZIP archives
       ripgrep # Fast command-line search tool (like grep, but faster)
-      htop # Interactive process viewer for the terminal
       btop # A resource monitor with a modern, colorful UI (CPU, RAM, etc.)
       tmux # Terminal multiplexer, allows multiple sessions/panes in one terminal
       thunderbird # Mozilla’s email, news, and calendar client
@@ -135,11 +129,6 @@ in
   # Enable udisks2 for auto-mounting
   services.udisks2.enable = true;
 
-  # Needed for an app idk yet
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
-
   # Automatic garbage collection and flakes
   nix = {
     settings = {
@@ -177,12 +166,7 @@ in
   environment.variables = {
     XCURSOR_THEME = "adwaita-icon-theme";
     XCURSOR_SIZE = "13";
-    GTK_THEME = "Adwaita-dark";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
-
-
-  services.gnome.gnome-keyring.enable = true;
   
   # Sway
   programs.sway = {
