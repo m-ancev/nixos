@@ -68,9 +68,14 @@ return {
       })
     end, { desc = "[S]earch [/] in Open Files" })
 
-    -- Shortcut for searching your Neovim configuration files
+    -- Shortcut for searching your Neovim configuration files on NixOS / Home Manager
     vim.keymap.set("n", "<leader>sn", function()
-      builtin.find_files({ cwd = vim.fn.stdpath("config") })
+      builtin.find_files({ cwd = '~/nixos/common/nvim' })
     end, { desc = "[S]earch [N]eovim files" })
+
+    -- Shortcut for searching your Neovim configuration files in imperative configurations
+    -- vim.keymap.set("n", "<leader>sn", function()
+    --   builtin.find_files({ cwd = vim.fn.stdpath("config") })
+    -- end, { desc = "[S]earch [N]eovim files" })
   end,
 }
