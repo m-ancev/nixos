@@ -1,11 +1,11 @@
 -- Oil Explorer
-vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { desc = "Toggle Oil [E]xplorer" })
+vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle Oil [E]xplorer" })
 
 -- Write All
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "[W]rite All" })
 
 -- Write Quit All
-vim.keymap.set("n", "<leader>q", ":wqa<CR>", { desc = "Write [Q]uit All" })
+vim.keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Write [Q]uit" })
 
 -- Force Quit
 vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force [Q]uit" })
