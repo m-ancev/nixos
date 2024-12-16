@@ -322,7 +322,7 @@
 font = "JetBrainsMono Nerd Font"
 font-variations = "Bold"
 font-size = 10
-anchor = top
+anchor = bottom
 height = 21
 width = 100%
 horizontal = true
