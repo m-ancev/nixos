@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle Oil [E]xplorer" })
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "[W]rite All" })
 
 -- Write Quit All
-vim.keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Write [Q]uit" })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "[Q]uit" })
 
 -- Force Quit
 vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force [Q]uit" })
