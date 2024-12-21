@@ -34,7 +34,7 @@ smart_borders on
 for_window [floating] border pixel 1
 
 ### Output configuration
-output * bg ~/wallpapers/nix0.jpg fill
+output * bg ~/wallpapers/nix_dracula.png fill
 
 ### Auto Mounting
 exec udiskie
