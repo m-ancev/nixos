@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
+      'saghen/blink.cmp',
       {
         "folke/lazydev.nvim",
         ft = "lua",
@@ -19,8 +20,10 @@ return {
         -- add more servers here
       }
 
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+
       for _, lsp in ipairs(servers) do
-        require("lspconfig")[lsp].setup({})
+        require("lspconfig")[lsp].setup({ capabilities = capabilities })
       end
 
       vim.api.nvim_create_autocmd('LspAttach', {
