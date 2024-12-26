@@ -33,11 +33,10 @@ return {
       dashboard.button("s", "󰈞  SEARCH FILE", ":Telescope find_files<CR>"),
       dashboard.button("r", "󰁯  SELECT SESSION TO RESTORE", ":lua require('persistence').select()<CR>"),
       dashboard.button("p", "󰦛  RESTORE PREVIOUS SESSION", ":lua require('persistence').load({ last = true })<CR>"),
+      dashboard.button("l", "󰒲  LAZY", ":Lazy<CR>"),
+      dashboard.button("m", "  MASON", ":Mason<CR>"),
       dashboard.button("q", "󰈆  QUIT NVIM", ":qa<CR>"),
-
     }
     alpha.setup(dashboard.config)
-
-    -- vim.keymap.set("n", "<leader>qS", function() require("persistence").select() end)
   end,
 }
