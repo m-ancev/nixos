@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      fastfetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
       playerctl # Control media players via the command line (for media keys in sway)
