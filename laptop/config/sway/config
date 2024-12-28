@@ -87,6 +87,9 @@ input type:touchpad {
   natural_scroll enabled
 }
 
+### Bar
+bindsym $mod+Shift+b exec "pkill -USR1 waybar"
+
 ### Key bindings
 #
 # Basics:

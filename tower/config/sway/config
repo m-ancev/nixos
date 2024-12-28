@@ -77,6 +77,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+### Bar
+bindsym $mod+Shift+b exec "pkill -USR1 waybar"
+
 ### Key bindings
 #
 # Basics:
