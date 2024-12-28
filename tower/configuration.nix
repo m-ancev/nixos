@@ -76,6 +76,7 @@ in
       wl-clipboard # Command-line copy/paste utilities for Wayland
       mako # Wayland notification daemon
       swaylock-effects # A customizable fork of swaylock for locking the screen
+      swayidle
       pavucontrol # GUI volume control for PulseAudio
       pamixer # Command-line tool to control PulseAudio volumes
   ];
@@ -172,6 +173,7 @@ in
   # Sway
   programs.sway = {
     enable = true;
+    package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
   };
 
