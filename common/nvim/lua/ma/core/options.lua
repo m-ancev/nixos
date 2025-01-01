@@ -1,5 +1,9 @@
--- Set colorscheme
+-- Set color scheme
 vim.g.colorscheme = "cyberdream"
+
+-- Enable spell checking
+vim.opt.spell = false
+vim.opt.spelllang = "de"
 
 -- Enable Terminal GUI colors
 vim.opt.termguicolors = true
