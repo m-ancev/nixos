@@ -14,7 +14,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu tofi-run | xargs swaymsg exec --
+set $menu tofi-drun | xargs swaymsg exec --
 
 # Font
 font pango:JetBrains Mono Bold 13
@@ -34,7 +34,7 @@ smart_borders on
 for_window [floating] border pixel 1
 
 ### Output configuration
-output * bg ~/wallpapers/bright_round.jpg fill
+output * bg ~/wallpapers/space.jpg fill
 
 ### Auto Mounting
 exec udiskie
