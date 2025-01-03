@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      fastfetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
       playerctl # Control media players via the command line (for media keys in sway)
@@ -81,6 +82,7 @@ in
       wl-clipboard # Command-line copy/paste utilities for Wayland
       mako # Wayland notification daemon
       swaylock-effects # A customizable fork of swaylock for locking the screen
+      swayidle
       pavucontrol # GUI volume control for PulseAudio
       pamixer # Command-line tool to control PulseAudio volumes
   ];
@@ -193,6 +195,7 @@ in
   # Sway
   programs.sway = {
     enable = true;
+    package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
   };
 

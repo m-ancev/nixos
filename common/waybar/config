@@ -11,8 +11,8 @@
     "modules-right": [
         "tray",
         "network",
-        "pulseaudio",
         "bluetooth",
+        "pulseaudio",
         "backlight",
         "battery",
     ],
@@ -60,26 +60,25 @@
         ],
     },
     "pulseaudio": {
-        "format": "   ",
-        "format-muted": "   ",
-        "tooltip-format": "{volume}%",
+        "format": "   {volume}% ",
+        "format-muted": "   OFF ",
         "on-click": "pavucontrol"
     },
     "network": {
-        "format-wifi": "  󰖩  ",
-        "format-ethernet": "  󰌗  ",
+        "format-wifi": "  󰖩  CON ",
+        "format-ethernet": "  󰌗  CON ",
         "interval": 1,
-        "format": "    ",
-        "format-disconnected": "  󰜺  ",
+        "format": "    ON ",
+        "format-disconnected": "  󰜺  OFF ",
         "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
         "on-click": "iwgtk",
     },
     "bluetooth": {
-      "format": " 󰂲 ",
-      "format-on": "  ",
-      "format-connected": " 󰂱 ",
+      "format": " 󰂲 OFF ",
+      "format-on": "  ON ",
+      "format-connected": " 󰂱 CON ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }

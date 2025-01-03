@@ -1,5 +1,9 @@
--- Set colorscheme
+-- Set color scheme
 vim.g.colorscheme = "cyberdream"
+
+-- Enable spell checking
+vim.opt.spell = false
+vim.opt.spelllang = "de"
 
 -- Enable Terminal GUI colors
 vim.opt.termguicolors = true
@@ -76,7 +80,7 @@ vim.opt.scrolloff = 10
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
 	callback = function()
 		vim.highlight.on_yank()
 	end,

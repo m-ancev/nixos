@@ -14,7 +14,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu tofi-run | xargs swaymsg exec --
+set $menu tofi-drun | xargs swaymsg exec --
 
 # Font
 font pango:JetBrains Mono Bold 13
@@ -29,18 +29,34 @@ bindsym $mod+Shift+Tab workspace prev;
 
 # Window Decorations
 default_border pixel 1
-gaps inner 0
+gaps inner 10
 smart_borders on
 for_window [floating] border pixel 1
 
 ### Output configuration
-output * bg ~/wallpapers/nix_dark_gray.png fill
+output * bg ~/wallpapers/bright_round.jpg fill
 
 ### Auto Mounting
 exec udiskie
 
 ### Screenshots
 bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
+
+# Enable window blur
+blur enable
+blur_radius 5
+blur_brightness 1.0
+
+# Set corner radius for rounded corners
+corner_radius 10
+
+# Enable window shadows
+shadows enable
+shadow_blur_radius 10
+shadow_color #00000080
+
+# Dim unfocused windows
+default_dim_inactive 0.2
 
 #
 # Example configuration:
@@ -60,6 +76,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+### Bar
+bindsym $mod+Shift+b exec "pkill -USR1 waybar"
 
 ### Key bindings
 #
@@ -158,16 +177,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 40px
+    bindsym $down resize grow height 40px
+    bindsym $up resize shrink height 40px
+    bindsym $right resize grow width 40px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 40px
+    bindsym Down resize grow height 40px
+    bindsym Up resize shrink height 40px
+    bindsym Right resize grow width 40px
 
     # Return to default mode
     bindsym Return mode "default"
