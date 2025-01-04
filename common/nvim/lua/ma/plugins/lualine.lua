@@ -26,7 +26,7 @@ return {
         lualine_b = {},
         lualine_c = {
           function() return '%=' end,
-          'filename'
+          { 'filename', path = 1 },
         },
         lualine_x = {},
         lualine_y = {},
