@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   user = "ma";
@@ -142,11 +142,6 @@ in
 
   # Enable udisks2 for auto-mounting
   services.udisks2.enable = true;
-
-  # Needed for an app idk yet
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
 
   # Automatic garbage collection and flakes
   nix = {
