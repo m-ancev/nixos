@@ -31,7 +31,6 @@ in
       jq # Command-line JSON processor
       qbittorrent # BitTorrent client with a nice GUI
       lm_sensors # Tools for monitoring CPU/GPU temperatures, fan speeds, etc.
-      brave # Privacy-focused web browser based on Chromium
       killall # Command-line tool to terminate processes by name
       libnotify # Library for sending desktop notifications
       libreoffice # Full-featured office suite (writer, calc, impress, etc.)
@@ -67,11 +66,11 @@ in
       udiskie # Automounter for removable media in Linux
       lua # Lua scripting language interpreter
       lua-language-server # Language server for Lua (code completion, linting)
+      luajitPackages.luarocks # Package manager for Lua modules (with LuaJIT support)
       tree-sitter # Parser generator tool and incremental parsing library
       fd # User-friendly alternative to ‘find’ (faster and easier syntax)
       gnumake # Tool for controlling the generation of executables (Make)
       gcc # GNU C/C++ compiler
-      luajitPackages.luarocks # Package manager for Lua modules (with LuaJIT support)
       python312 # Python 3 interpreter
       python312Packages.pip
       python312Packages.virtualenv
