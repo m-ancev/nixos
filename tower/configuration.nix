@@ -1,4 +1,4 @@
-{  pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   user = "ma";
@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      meld
       fastfetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
@@ -23,6 +24,9 @@ in
       zathura # Minimal and lightweight PDF (and other formats) viewer
       swayimg # Minimal image viewer for Wayland/sway
       baobab # Disk usage analyzer (GNOME app)
+      gnome-tweaks # Tool to adjust advanced GNOME desktop settings
+      libsForQt5.qt5ct # Qt5 configuration tool (to set themes, fonts, etc.)
+      gnome-themes-extra # Additional GNOME themes (icons, UI themes)
       vlc # Versatile, cross-platform multimedia player
       jq # Command-line JSON processor
       qbittorrent # BitTorrent client with a nice GUI
@@ -173,6 +177,7 @@ in
     GTK_THEME = "Adwaita-dark";
     QT_QPA_PLATFORMTHEME = "qt5ct";
   };
+
   
   # Sway
   programs.sway = {

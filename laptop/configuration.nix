@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      meld
       fastfetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
@@ -28,7 +29,6 @@ in
       gnome-themes-extra # Additional GNOME themes (icons, UI themes)
       vlc # Versatile, cross-platform multimedia player
       jq # Command-line JSON processor
-      dzen2 # Lightweight, customizable status bar
       qbittorrent # BitTorrent client with a nice GUI
       lm_sensors # Tools for monitoring CPU/GPU temperatures, fan speeds, etc.
       brave # Privacy-focused web browser based on Chromium
@@ -52,10 +52,8 @@ in
       tldr # Simplified and community-driven man pages
       keepassxc # Cross-platform password manager (KeePass-compatible)
       obsidian # Note-taking and knowledge base app with Markdown
-      syncthing # Continuous file synchronization between devices
       unzip # Extracts files from ZIP archives
       ripgrep # Fast command-line search tool (like grep, but faster)
-      htop # Interactive process viewer for the terminal
       btop # A resource monitor with a modern, colorful UI (CPU, RAM, etc.)
       tmux # Terminal multiplexer, allows multiple sessions/panes in one terminal
       thunderbird # Mozilla’s email, news, and calendar client
@@ -186,8 +184,6 @@ in
     QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
-
-  services.gnome.gnome-keyring.enable = true;
   
   # Sway
   programs.sway = {
