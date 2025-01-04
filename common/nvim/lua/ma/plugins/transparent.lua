@@ -9,7 +9,7 @@ return {
           'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
           'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
           'LineNr', 'NonText', 'SignColumn', 'CursorLine', 'CursorLineNr',
-          'StatusLine', 'StatusLineNC', 'EndOfBuffer',
+          'StatusLine', 'StatusLineNC', 'EndOfBuffer', 'FoldColumn', 'Folded', 'UfoFoldedFg', 'UfoFoldedBg'
         },
         extra_groups = {
           -- Add plugin-specific and border-related groups
