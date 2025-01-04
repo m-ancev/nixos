@@ -168,6 +168,8 @@ in
   environment.variables = {
     XCURSOR_THEME = "adwaita-icon-theme";
     XCURSOR_SIZE = "13";
+    GTK_THEME = "Adwaita-dark";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
   
   # Sway
