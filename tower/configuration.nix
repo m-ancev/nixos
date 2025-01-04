@@ -61,7 +61,6 @@ in
       sublime-merge # A GUI Git client (by the makers of Sublime Text)
       nautilus # GNOME’s default file manager
       udiskie # Automounter for removable media in Linux
-      python3 # Python 3 interpreter
       lua # Lua scripting language interpreter
       lua-language-server # Language server for Lua (code completion, linting)
       tree-sitter # Parser generator tool and incremental parsing library
@@ -69,7 +68,10 @@ in
       gnumake # Tool for controlling the generation of executables (Make)
       gcc # GNU C/C++ compiler
       luajitPackages.luarocks # Package manager for Lua modules (with LuaJIT support)
-      python311Packages.pip # Python package installer (for Python 3.11)
+      python312 # Python 3 interpreter
+      python312Packages.pip
+      python312Packages.virtualenv
+      python312Packages.jedi-language-server
       nodejs_22 # JavaScript runtime (Node.js) version 22
       grim # Screenshot utility for Wayland
       slurp # Select a region in a Wayland compositor (used with grim)
