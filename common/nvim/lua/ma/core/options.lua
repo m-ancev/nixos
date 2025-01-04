@@ -1,5 +1,5 @@
 -- Set color scheme
-vim.g.colorscheme = "cyberdream"
+vim.g.colorscheme = "rose-pine"
 
 -- Enable spell checking
 vim.opt.spell = false

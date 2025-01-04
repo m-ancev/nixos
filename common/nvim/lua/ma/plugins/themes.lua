@@ -1,4 +1,5 @@
 return {
+  "rose-pine/neovim",
   "barrientosvctor/abyss.nvim",
   "baliestri/aura-theme",
   "ribru17/bamboo.nvim",
