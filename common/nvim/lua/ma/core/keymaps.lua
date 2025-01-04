@@ -36,3 +36,4 @@ vim.keymap.set("n", "<leader>z", vim.diagnostic.setloclist, { desc = "Open diagn
 -- Toggle background color
 vim.keymap.set("n", "<leader>Tl", "<cmd>set background=light<CR>", { desc = "[T]heme [l]ight" })
 vim.keymap.set("n", "<leader>Td", "<cmd>set background=dark<CR>", { desc = "[T]heme [d]ark" })
+vim.keymap.set("n", "<leader>Tt", "<cmd>TransparentToggle<CR>", { desc = "[T]heme transparent [t]oggle" })
