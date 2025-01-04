@@ -15,6 +15,7 @@ return {
     local servers = {
       "lua_ls",
       "nil_ls",
+      "jedi_language_server",
       -- add more servers here
     }
 
