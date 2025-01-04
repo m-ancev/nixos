@@ -196,6 +196,13 @@ in
     wrapperFeatures.gtk = true;
   };
 
+  # Display Manager
+  services.displayManager = {
+    enable = true;
+    ly.enable = true;
+    defaultSession = "sway";
+  };
+
   # Steam
   programs.steam = {
     enable = true;
