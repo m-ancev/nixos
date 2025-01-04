@@ -11,6 +11,9 @@ return {
 
       { "<leader>T",  group = "[T]heme" },
       { "<leader>T_", hidden = true },
+
+      { "<leader>v",  group = "LSP" },
+      { "<leader>v_", hidden = true },
     })
   end,
 }
