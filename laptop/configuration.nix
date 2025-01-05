@@ -14,6 +14,8 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      yazi
+      typescript-language-server
       docker-compose
       meld
       fastfetch
