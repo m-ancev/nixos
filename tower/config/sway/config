@@ -40,7 +40,7 @@ output * bg ~/wallpapers/space.jpg fill
 exec udiskie
 
 ### Screenshots
-bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy && wl-paste > ~/Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
 
 # Enable window blur
 # blur enable
