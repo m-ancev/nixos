@@ -23,6 +23,7 @@ return {
       "lua_ls",
       "nil_ls",
       "jedi_language_server",
+      "ts_ls",
     }
 
     -- Capabilities for LSP servers
