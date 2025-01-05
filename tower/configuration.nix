@@ -188,6 +188,12 @@ in
     wrapperFeatures.gtk = true;
   };
 
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # Display Manager
   services.displayManager = {
     enable = true;
