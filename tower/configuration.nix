@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      docker-compose
       meld
       fastfetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
@@ -163,7 +164,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = "ma";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "vboxusers"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "vboxusers" "docker" ];
   };
 
   # Allow unfree packages
@@ -199,6 +200,9 @@ in
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+  # Docker
+  virtualisation.docker.enable = true;
 
   # kanshi systemd service
   systemd.user.services.kanshi = {
