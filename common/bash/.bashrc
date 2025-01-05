@@ -6,7 +6,10 @@ export TERM='kitty'
 alias rebt='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#tower && popd'
 alias rebl='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#laptop && popd'
 alias conf='nvim /home/$USER/nixos/'
+# sudo in interactive mode
 alias esudo='sudo -Es'
+alias s='sudo -Es'
+alias f='yazi'
 alias ..='cd ..'
 alias nv=nvim
 alias tm=tmux
