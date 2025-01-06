@@ -1,9 +1,11 @@
 # variables
 export EDITOR='nvim'
 export TERM='kitty'
+export NIXOS_OZONE_WL=1
 
 # aliases
 alias rebt='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#tower && popd'
+alias reb='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#tower && popd'
 alias rebl='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#laptop && popd'
 alias conf='nvim /home/$USER/nixos/'
 # sudo in interactive mode
