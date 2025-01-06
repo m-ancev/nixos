@@ -32,8 +32,8 @@ vim.opt.relativenumber = true
 -- Enable mouse mode
 vim.opt.mouse = "a"
 
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
+-- true when lualine disabled, false when lualine enabled
+vim.opt.showmode = true
 
 -- Enable highlight on search
 vim.opt.hlsearch = true
