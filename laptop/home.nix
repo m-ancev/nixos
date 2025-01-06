@@ -10,6 +10,8 @@
 
     # ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
 
+    # ".config/hypr/hyprpaper.conf".source = ./common/hyprpaper/hyprpaper.conf;
+
     ".config/waybar".source = ../common/waybar;
 
     ".config/mako/config".source = ../common/mako/config;
