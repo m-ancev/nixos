@@ -3,7 +3,7 @@
     "height": 21,
     "spacing": 5,
     "modules-left": [
-        "sway/workspaces",
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "clock",
@@ -22,6 +22,9 @@
       "spacing": 20,
     },
     "sway/workspaces": {
+      "disable-scroll": true,
+    },
+    "hyprland/workspaces": {
       "disable-scroll": true,
     },
     "clock": {
