@@ -14,6 +14,9 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      clipse
+      hyprpaper
+      nwg-look
       yazi
       typescript-language-server
       docker-compose
