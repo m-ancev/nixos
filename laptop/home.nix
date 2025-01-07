@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 {
   imports = [];
 
@@ -8,9 +7,15 @@
   home.file = {
     ".config/sway/config".source = ./config/sway/config;
 
-    # ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
+    ".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
 
-    # ".config/hypr/hyprpaper.conf".source = ./common/hyprpaper/hyprpaper.conf;
+    ".config/hypr/hyprpaper.conf".source = ../common/hypr/hyprpaper.conf;
+
+    ".config/hypr/hyprlock.conf".source = ../common/hypr/hyprlock.conf;
+
+    ".config/hypr/hypridle.conf".source = ../common/hypr/hypridle.conf;
+
+    ".config/yazi".source = ../common/yazi;
 
     ".config/waybar".source = ../common/waybar;
 
