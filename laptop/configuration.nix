@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      kdePackages.xwaylandvideobridge
       clipse
       hyprpaper
       nwg-look
