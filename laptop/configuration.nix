@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      eog
       hypridle
       hyprlock
       hyprsunset
