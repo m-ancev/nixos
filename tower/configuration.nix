@@ -14,20 +14,22 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
-      eog
-      hypridle
-      hyprlock
-      hyprsunset
-      hyprpolkitagent
-      kdePackages.xwaylandvideobridge
-      clipse
-      hyprpaper
-      nwg-look
-      yazi
-      typescript-language-server
+      zig # latest stable release of zig
+      ghostty # terminal
+      eog # gnome image viewer
+      hypridle # idle functionality for hyprland
+      hyprlock # lock screen for hyprland
+      hyprsunset # bluelight filter for hyprland
+      hyprpolkitagent # sudo rights for gui for hyprland
+      kdePackages.xwaylandvideobridge # xwayland compatibility
+      clipse # clipboard history
+      hyprpaper # wallpapers for hyprland
+      nwg-look # gnome theming
+      yazi # terminal file explorer
+      typescript-language-server # ts_ls
       docker-compose
-      meld
-      fastfetch
+      meld # diff viewer
+      fastfetch # terminal fetch
       iwgtk # GUI front-end for iwd (Wi-Fi daemon)
       amberol # Simple, modern, and opinionated music player
       playerctl # Control media players via the command line (for media keys in sway)
@@ -129,6 +131,9 @@ in
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
+
+  # Keyboard
+  services.xserver.xkb.layout = "us,de";
 
   # Sound
   services.pipewire = {
