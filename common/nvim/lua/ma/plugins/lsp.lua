@@ -8,6 +8,7 @@ return {
     'rafamadriz/friendly-snippets',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
+    "williamboman/mason.nvim",
     {
       "folke/lazydev.nvim",
       ft = "lua",
@@ -82,5 +83,8 @@ return {
         ['<C-Space>'] = cmp.mapping.complete(),
       },
     })
+
+    -- mason for docker env
+    require("mason").setup()
   end,
 }
