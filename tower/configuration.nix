@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      bat # replacement for cat
       zig # latest stable release of zig
       ghostty # terminal
       eog # gnome image viewer
