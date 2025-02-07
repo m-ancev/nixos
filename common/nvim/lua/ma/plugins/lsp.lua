@@ -25,6 +25,7 @@ return {
       "nil_ls",
       "jedi_language_server",
       "ts_ls",
+      "angularls"
     }
 
     -- Capabilities for LSP servers
