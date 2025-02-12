@@ -1,11 +1,8 @@
-font=JetBrains Mono Bold 10
+font=JetBrains Mono Bold 13
 text-color=#FFFFFF
 background-color=#000000
 border-color=#000000
 border-size=1
-
 default-timeout=5000
-width=200
-height=30
 margin=5
 padding=4
