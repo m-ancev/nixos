@@ -13,10 +13,10 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.
-  font = "JetBrainsMono Nerd Font"
+  font = "JetBrainsMono Nerd Font Bold"
 
 	# Point size of text.
-	font-size = 15
+	font-size = 18
 
 	# Comma separated list of OpenType font feature settings to apply,
 	# if supported by the chosen font. The format is similar to the CSS
@@ -145,7 +145,7 @@
 	prompt-text = "> "
 
 	# Extra horizontal padding between prompt and input.
-	prompt-padding = 0
+	prompt-padding = 5
 
 	# Placeholder input text.
 	placeholder-text = ""
@@ -167,8 +167,8 @@
 ### Window theming
 #
 	# Width and height of the window. Can be pixels or a percentage.
-	width = 300
-  height = 30%
+	width = 400
+  height = 40%
 
 	# Window background color
 	background-color = #000000
@@ -213,7 +213,7 @@
 	#
 	# Supported values: top-left, top, top-right, right, bottom-right,
 	# bottom, bottom-left, left, center.
-	anchor = center
+	anchor = top-left
 
 	# Set the size of the exclusive zone.
 	#
