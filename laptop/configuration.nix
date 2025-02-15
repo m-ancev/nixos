@@ -12,6 +12,7 @@ in
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; 
 
   environment.systemPackages = with pkgs; [
       cbonsai # terminal bonsai tree
