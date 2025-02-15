@@ -1,5 +1,6 @@
 -- Set color scheme
-vim.g.colorscheme = "rose-pine"
+-- vim.g.colorscheme = "rose-pine"
+vim.g.colorscheme = "quiet"
 
 -- Enable spell checking
 vim.opt.spell = false
@@ -75,7 +76,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- vim.opt.scrolloff = 10
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {

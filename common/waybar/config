@@ -3,10 +3,10 @@
     "height": 21,
     "spacing": 5,
     "modules-left": [
-        "hyprland/workspaces",
+        "clock"
     ],
     "modules-center": [
-        "clock",
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
@@ -19,17 +19,38 @@
     "tray": {
       "icon-size": 15,
       "show-passive-items": true,
-      "spacing": 20,
+      "spacing": 20
     },
     "sway/workspaces": {
-      "disable-scroll": true,
+      "disable-scroll": true
     },
     "hyprland/workspaces": {
       "disable-scroll": true,
+      "active-color": "#FFFFFF",
+      "inactive-color": "#888888",  // Inactive workspaces will appear greyed out
+      "urgent-color": "#FF0000"      // Optional: color for urgent workspaces
     },
     "clock": {
+        "format": "   {:%H:%M} ",
+        "format-alt": " 󰸗  {:%Y-%m-%d} ",
+        "format-alt": " 󰸗  {:%A, %B %d, %Y (%R)} ",
         "tooltip-format": "{calendar}",
-        "format-alt": " {:%Y-%m-%d} "
+        "calendar": {
+          "mode"          : "year",
+          "mode-mon-col"  : 3,
+          "weeks-pos"     : "right",
+          "on-scroll"     : 1,
+          "format": {
+            "months":     "<span color='#ffead3'><b>{}</b></span>",
+            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+          }
+        },
+        "actions":  {
+          "on-click-right": "mode",
+        }
     },
     "backlight": {
         "format": " {icon} {percent}% ",
@@ -60,7 +81,7 @@
             "",
             "",
             ""
-        ],
+        ]
     },
     "pulseaudio": {
         "format": "   {volume}% ",
@@ -75,7 +96,7 @@
         "format-disconnected": "  󰜺  OFF ",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
-        "on-click": "iwgtk",
+        "on-click": "iwgtk"
     },
     "bluetooth": {
       "format": " 󰂲 OFF ",

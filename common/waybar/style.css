@@ -20,6 +20,11 @@ button {
   color: #FFFFFF;
 }
 
+/* Grey out inactive workspace buttons */
+#workspaces button:not(.active):not(.focused):not(.urgent):not(:hover) {
+  color: #888888;
+}
+
 #workspaces button.active {
   color: #FFFFFF;
 }
@@ -29,22 +34,21 @@ button {
 }
 
 #workspaces button.urgent {
-	background:  rgba(255, 200, 0, 0.35);
+  background: rgba(255, 200, 0, 0.35);
   color: #FF0000;
 }
 
 #workspaces button:hover {
   background: #000000;
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
+.modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
+.modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
-
