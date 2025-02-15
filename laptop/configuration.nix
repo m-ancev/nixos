@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      cbonsai # terminal bonsai tree
       angular-language-server # angularls
       bat # replacement for cat
       zig # latest stable release of zig
@@ -32,52 +33,51 @@ in
       docker-compose
       meld # diff viewer
       fastfetch # terminal fetch
-      iwgtk # GUI front-end for iwd (Wi-Fi daemon)
-      amberol # Simple, modern, and opinionated music player
-      playerctl # Control media players via the command line (for media keys in sway)
+      iwgtk # GUI for iwd (Wi-Fi daemon)
+      amberol # music player
+      playerctl # media players via the command line (for media keys in sway/hyprland)
       wayland-utils # Utilities for Wayland (like wayland-info, etc.)
-      celluloid # GUI front-end for MPV (GNOME-based minimal media player)
-      zathura # Minimal and lightweight PDF (and other formats) viewer
-      swayimg # Minimal image viewer for Wayland/sway
+      celluloid # GUI for MPV (GNOME-based minimal media player)
+      zathura # lightweight PDF (and other formats) viewer
+      swayimg # image viewer for Wayland
       baobab # Disk usage analyzer (GNOME app)
-      gnome-tweaks # Tool to adjust advanced GNOME desktop settings
+      gnome-tweaks # adjust GNOME desktop settings
       libsForQt5.qt5ct # Qt5 configuration tool (to set themes, fonts, etc.)
       gnome-themes-extra # Additional GNOME themes (icons, UI themes)
-      vlc # Versatile, cross-platform multimedia player
+      vlc # multimedia player
       jq # Command-line JSON processor
-      qbittorrent # BitTorrent client with a nice GUI
-      lm_sensors # Tools for monitoring CPU/GPU temperatures, fan speeds, etc.
+      qbittorrent # BitTorrent client
+      lm_sensors # monitoring CPU/GPU temperatures, fan speeds, etc.
       killall # Command-line tool to terminate processes by name
       libnotify # Library for sending desktop notifications
-      libreoffice # Full-featured office suite (writer, calc, impress, etc.)
-      discord-canary # Experimental/preview version of the Discord chat client
-      waybar # Highly customizable Wayland bar (e.g. for sway)
-      nil # Language server for the NIL programming language (if applicable)
+      libreoffice # office suite (writer, calc, impress, etc.)
+      discord-canary # Experimental/preview version of Discord
+      waybar # Wayland bar
+      nil # Language server NIL
       gnome-system-monitor # System monitoring GUI tool (resources, processes)
       home-manager # Nix-based user configuration tool (manages dotfiles and user packages)
       cargo # Rust package manager and build tool
-      xfce.mousepad # Lightweight graphical text editor for the Xfce desktop
+      xfce.mousepad # graphical text editor
       adwaita-icon-theme # Default GNOME icon theme
-      mullvad-vpn # VPN client for Mullvad VPN service
-      neovim # Modernized, Vim-based text editor
+      mullvad-vpn # VPN client
+      neovim
       wget # Command-line tool for retrieving files from the web
-      git # Distributed version control system
-      firefox # Mozilla’s open-source web browser
-      kitty # Fast, GPU-accelerated terminal emulator
+      git
+      firefox
+      kitty
       tldr # Simplified and community-driven man pages
-      keepassxc # Cross-platform password manager (KeePass-compatible)
-      obsidian # Note-taking and knowledge base app with Markdown
+      keepassxc
       unzip # Extracts files from ZIP archives
       ripgrep # Fast command-line search tool (like grep, but faster)
       btop # A resource monitor with a modern, colorful UI (CPU, RAM, etc.)
-      tmux # Terminal multiplexer, allows multiple sessions/panes in one terminal
-      thunderbird # Mozilla’s email, news, and calendar client
+      tmux
+      thunderbird
       lazygit # Terminal UI for git commands
       tree # Displays directory trees in the terminal
       tofi # A minimalistic application launcher for Wayland
       iwd # iNet Wireless Daemon for managing Wi-Fi on Linux
-      fzf # Command-line fuzzy finder (useful for interactive searching)
-      sublime-merge # A GUI Git client (by the makers of Sublime Text)
+      fzf # Command-line fuzzy finder
+      sublime-merge # A GUI Git client
       nautilus # GNOME’s default file manager
       udiskie # Automounter for removable media in Linux
       lua # Lua scripting language interpreter
