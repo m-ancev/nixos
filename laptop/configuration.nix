@@ -14,11 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
-      angular-language-server
-      dotnetCorePackages.dotnet_8.sdk
-      dotnetCorePackages.dotnet_8.runtime
-      jetbrains.rider
-      rustdesk
+      angular-language-server # angularls
       bat # replacement for cat
       zig # latest stable release of zig
       ghostty # terminal
