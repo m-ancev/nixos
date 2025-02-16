@@ -33,7 +33,6 @@
     "clock": {
         "format": "   {:%H:%M} ",
         "format-alt": " 󰸗  {:%Y-%m-%d} ",
-        "format-alt": " 󰸗  {:%A, %B %d, %Y (%R)} ",
         "tooltip-format": "{calendar}",
         "calendar": {
           "mode"          : "year",
@@ -41,11 +40,11 @@
           "weeks-pos"     : "right",
           "on-scroll"     : 1,
           "format": {
-            "months":     "<span color='#ffead3'><b>{}</b></span>",
-            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            "months":   "<span color='#8c7f70'><b>{}</b></span>",  // base0A
+            "days":     "<span color='#9b8d7f'><b>{}</b></span>",  // base0B
+            "weeks":    "<span color='#5f8787'><b>W{}</b></span>", // base08
+            "weekdays": "<span color='#aaaaaa'><b>{}</b></span>",  // base09
+            "today":    "<span color='#888888'><b><u>{}</u></b></span>" // base0D
           }
         },
         "actions":  {
