@@ -1,6 +1,5 @@
 -- Set color scheme
--- vim.g.colorscheme = "rose-pine"
-vim.g.colorscheme = "quiet"
+vim.g.colorscheme = "rose-pine"
 
 -- Enable spell checking
 vim.opt.spell = false
