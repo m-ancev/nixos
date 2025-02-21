@@ -10,21 +10,21 @@ return {
     --   "circular"
     --   "sine"
     neoscroll.setup({
-      easing = "sine"
+      easing = "quadratic"
     })
     local keymap = {
-      ["<C-u>"] = function() neoscroll.ctrl_u({ duration = 250 }) end,
-      ["<C-d>"] = function() neoscroll.ctrl_d({ duration = 250 }) end,
-      ["<C-k>"] = function() neoscroll.ctrl_u({ duration = 250 }) end,
-      ["<C-j>"] = function() neoscroll.ctrl_d({ duration = 250 }) end,
+      ["<C-u>"] = function() neoscroll.ctrl_u({ duration = 100 }) end,
+      ["<C-d>"] = function() neoscroll.ctrl_d({ duration = 100 }) end,
+      ["<C-k>"] = function() neoscroll.ctrl_u({ duration = 100 }) end,
+      ["<C-j>"] = function() neoscroll.ctrl_d({ duration = 100 }) end,
 
-      ["<C-b>"] = function() neoscroll.ctrl_b({ duration = 250 }) end,
-      ["<C-f>"] = function() neoscroll.ctrl_f({ duration = 250 }) end,
-      ["<PageUp>"] = function() neoscroll.ctrl_b({ duration = 250 }) end,
-      ["<PageDown>"] = function() neoscroll.ctrl_f({ duration = 250 }) end,
+      ["<C-b>"] = function() neoscroll.ctrl_b({ duration = 100 }) end,
+      ["<C-f>"] = function() neoscroll.ctrl_f({ duration = 100 }) end,
+      ["<PageUp>"] = function() neoscroll.ctrl_b({ duration = 100 }) end,
+      ["<PageDown>"] = function() neoscroll.ctrl_f({ duration = 100 }) end,
 
-      ["<C-y>"] = function() neoscroll.scroll(-0.1, { move_cursor = false, duration = 50 }) end,
-      ["<C-e>"] = function() neoscroll.scroll(0.1, { move_cursor = false, duration = 50 }) end,
+      ["<C-y>"] = function() neoscroll.scroll(-0.1, { move_cursor = false, duration = 100 }) end,
+      ["<C-e>"] = function() neoscroll.scroll(0.1, { move_cursor = false, duration = 100 }) end,
     }
 
     local modes = { 'n', 'v', 'x' }

@@ -12,7 +12,6 @@ in
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; 
 
   environment.systemPackages = with pkgs; [
       cbonsai # terminal bonsai tree
@@ -115,6 +114,7 @@ in
   boot.loader.grub.devices = [ "nodev" ];
   boot.loader.grub.useOSProber = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; 
 
   # Networking
   networking.hostName = "nixos";
@@ -202,11 +202,11 @@ in
 
   
   # Sway
-  programs.sway = {
-    enable = true;
-    package = pkgs.swayfx;
-    wrapperFeatures.gtk = true;
-  };
+  # programs.sway = {
+  #   enable = true;
+  #   package = pkgs.swayfx;
+  #   wrapperFeatures.gtk = true;
+  # };
 
   # Hyprland
   programs.hyprland = {
@@ -218,7 +218,7 @@ in
   services.displayManager = {
     enable = true;
     ly.enable = true;
-    defaultSession = "sway";
+    defaultSession = "hyprland";
   };
 
   # Steam

@@ -3,7 +3,6 @@
     "height": 21,
     "spacing": 5,
     "modules-left": [
-        "clock"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -15,6 +14,7 @@
         "pulseaudio",
         "backlight",
         "battery",
+        "clock"
     ],
     "tray": {
       "icon-size": 15,
@@ -31,16 +31,18 @@
       "urgent-color": "#FF0000"      // Optional: color for urgent workspaces
     },
     "clock": {
-        "format": "   {:%H:%M} ",
-        "format-alt": " 󰸗  {:%Y-%m-%d} ",
+
+        // "format": "  {:%H:%M} ",
+        // "format-alt": " 󰸗 {:%Y-%m-%d} ",
+
+        "format": " DTM: {:%H:%M} ",
         "tooltip-format": "{calendar}",
         "calendar": {
           "mode"          : "year",
           "mode-mon-col"  : 3,
           "weeks-pos"     : "right",
           "on-scroll"     : 1,
-          "format": {
-            "months":   "<span color='#8c7f70'><b>{}</b></span>",  // base0A
+          "format": { "months":   "<span color='#8c7f70'><b>{}</b></span>",  // base0A
             "days":     "<span color='#9b8d7f'><b>{}</b></span>",  // base0B
             "weeks":    "<span color='#5f8787'><b>W{}</b></span>", // base08
             "weekdays": "<span color='#aaaaaa'><b>{}</b></span>",  // base09
@@ -52,7 +54,10 @@
         }
     },
     "backlight": {
-        "format": " {icon} {percent}% ",
+
+        // "format": " {icon} {percent}% ",
+
+        "format": " BRI: {percent}% ",
         "format-icons": [
             "",
             "",
@@ -71,9 +76,12 @@
             "critical": 10
         },
         "interval": 1,
-        "format": " {icon} {capacity}% ",
-        "format-charging": " 󱐋 {capacity}% ",
-        "format-plugged": " 󰚥 {capacity}% ",
+
+        // "format": " {icon} {capacity}% ",
+        // "format-charging": " 󱐋 {capacity}% ",
+
+        "format": " BAT: {capacity}% ",
+        "format-charging": " BAT: {capacity}% ",
         "format-icons": [
             "",
             "",
@@ -83,24 +91,39 @@
         ]
     },
     "pulseaudio": {
-        "format": "   {volume}% ",
-        "format-muted": "   OFF ",
+        // "format": "   {volume}% ",
+        // "format-muted": "   OFF ",
+
+        "format": " VOL: {volume}% ",
+        "format-muted": " VOL: OFF ",
         "on-click": "pavucontrol"
     },
     "network": {
-        "format-wifi": "  󰖩  CON ",
-        "format-ethernet": "  󰌗  CON ",
+        "format-wifi": " WIFI: CON ",
+        "format-ethernet": " ETH: CON ",
+        "format": " NET: NOCON ",
+        "format-disconnected": " NET: OFF ",
         "interval": 1,
-        "format": "    ON ",
-        "format-disconnected": "  󰜺  OFF ",
+
+        // "format-wifi": "  󰖩  CON ",
+        // "format-ethernet": "  󰌗  CON ",
+        // "format": "    ON ",
+        // "format-disconnected": "  󰜺  OFF ",
+
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
         "on-click": "iwgtk"
     },
     "bluetooth": {
-      "format": " 󰂲 OFF ",
-      "format-on": "  ON ",
-      "format-connected": " 󰂱 CON ",
+
+      // "format": " 󰂲 OFF ",
+      // "format-on": "  ON ",
+      // "format-connected": " 󰂱 CON ",
+
+      "format": " BT: OFF ",
+      "format-on": " BT: ON ",
+      "format-connected": " BT: CON ",
+
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
