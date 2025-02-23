@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      brightnessctl
       cbonsai # terminal bonsai tree
       angular-language-server # angularls
       bat # replacement for cat
