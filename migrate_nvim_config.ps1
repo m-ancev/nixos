@@ -4,7 +4,6 @@ $destinationPath = Join-Path -Path $env:USERPROFILE -ChildPath "AppData\Local\nv
 $oldDataPath = Join-Path -Path $env:USERPROFILE -ChildPath "AppData\Local\nvim-data"
 
 # Remove all contents from the destination directory
-Write-Host "`n"
 Write-Host "deleting configuration files in: $destinationPath ..."
 Remove-Item -Path "$destinationPath\*" -Recurse -Force
 Write-Host "done`n"
