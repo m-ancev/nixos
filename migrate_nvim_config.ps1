@@ -10,7 +10,7 @@ Remove-Item -Path "$destinationPath\*" -Recurse -Force
 Write-Host "done`n"
 
 
-$confirmation = Read-Host "also delete data files in $oldDataPath? (y/n)"
+$confirmation = Read-Host "also delete data files in ${oldDataPath}? (y/n)"
 if ($confirmation -match '^[Yy]$') {
     Write-Host "deleting files in data path: $oldDataPath ..."
     Remove-Item -Path "$oldDataPath\*" -Recurse -Force
