@@ -1,18 +1,15 @@
 return {
-  "ggandor/leap.nvim",
-  enabled = true,
-  keys = {
-    { "s", mode = { "n", "x", "o" }, desc = "Leap Forward to" },
-    { "S", mode = { "n", "x", "o" }, desc = "Leap Backward to" },
-    { "gs", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
+  "ggandor/flit.nvim",
+  dependencies = {
+    "ggandor/leap.nvim"
   },
-  config = function(_, opts)
-    local leap = require("leap")
-    for k, v in pairs(opts) do
-      leap.opts[k] = v
+  enabled = true,
+  keys = function()
+    local ret = {}
+    for _, key in ipairs({ "f", "F", "t", "T" }) do
+      ret[#ret + 1] = { key, mode = { "n", "x", "o" } }
     end
-    leap.add_default_mappings(true)
-    vim.keymap.del({ "x", "o" }, "x")
-    vim.keymap.del({ "x", "o" }, "X")
+    return ret
   end,
+  opts = { labeled_modes = "nx" },
 }
