@@ -49,8 +49,23 @@ return {
     vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
     vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
     vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-    vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
-
+    
+    -- Add binding to remove entry from buffer view
+    vim.keymap.set("n", "<leader><leader>", function()
+      builtin.buffers({
+        attach_mappings = function(prompt_bufnr, map)
+          local delete_buf = function()
+            local selection = require("telescope.actions.state").get_selected_entry()
+            require("telescope.actions").close(prompt_bufnr)
+            vim.api.nvim_buf_delete(selection.bufnr, { force = true })
+          end
+          map("i", "<C-d>", delete_buf)
+          map("n", "<C-d>", delete_buf)
+          return true
+        end,
+      })
+    end, { desc = "[ ] Find existing buffers" })
+    
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set("n", "<leader>/", function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.
