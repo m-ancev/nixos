@@ -64,7 +64,7 @@ in
       neovim
       wget # Command-line tool for retrieving files from the web
       git
-      firefox
+      librewolf
       kitty
       tldr # Simplified and community-driven man pages
       keepassxc
