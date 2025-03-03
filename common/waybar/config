@@ -1,7 +1,7 @@
 {
     "position": "bottom",
     "height": 21,
-    "spacing": 5,
+    "spacing": 15,
     "modules-left": [
         "hyprland/window"
     ],
@@ -20,16 +20,16 @@
     "tray": {
       "icon-size": 15,
       "show-passive-items": true,
-      "spacing": 20
+      "spacing": 35
     },
     "hyprland/window": {
       "format": " {class} ",
     },
     "hyprland/workspaces": {
       "disable-scroll": true,
-      "active-color": "#FFFFFF",
+      "active-color": "#ffffff",
       "inactive-color": "#888888",
-      "urgent-color": "#FF0000",
+      "urgent-color": "#ff0000",
       "format": "{icon} ",
       "format-icons": {
         "1": "",
@@ -47,20 +47,8 @@
       },
     },
     "clock": {
-        "format": "  {:%H:%M} ",
-        "format-alt": " 󰸗 {:%Y-%m-%d} ",
-        "calendar": {
-          "mode"          : "year",
-          "mode-mon-col"  : 3,
-          "weeks-pos"     : "right",
-          "on-scroll"     : 1,
-          "format": { "months":   "<span color='#8c7f70'><b>{}</b></span>",  // base0A
-            "days":     "<span color='#9b8d7f'><b>{}</b></span>",  // base0B
-            "weeks":    "<span color='#5f8787'><b>W{}</b></span>", // base08
-            "weekdays": "<span color='#aaaaaa'><b>{}</b></span>",  // base09
-            "today":    "<span color='#888888'><b><u>{}</u></b></span>" // base0D
-          }
-        },
+        "format": "  {:%H:%m} ",
+        "format-alt": " 󰸗 {:%y-%m-%d} ",
         "actions":  {
           "on-click-right": "mode",
         }
@@ -96,24 +84,24 @@
         ]
     },
     "pulseaudio": {
-        "format": "   {volume}% ",
-        "format-muted": "   OFF ",
+        "format": "  {volume}% ",
+        "format-muted": "  off ",
         "on-click": "pavucontrol"
     },
     "network": {
         "interval": 1,
-        "format-wifi": "  󰖩  CON ",
-        "format-ethernet": "  󰌗  CON ",
-        "format": "    ON ",
-        "format-disconnected": "  󰜺  OFF ",
-        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": "  {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n⬇ {bandwidthUpBits} ⬆ {bandwidthDownBits}",
+        "format-wifi": "  󰖩 con ",
+        "format-ethernet": "  󰌗 con ",
+        "format": "   on ",
+        "format-disconnected": "  󰜺 off ",
+        "tooltip-format": " {bandwidthupbits}  {bandwidthdownbits}\n{ifname}\n{ipaddr}/{cidr}\n",
+        "tooltip-format-wifi": " {essid} {frequency}mhz\nstrength: {signaldbm}dbm ({signalstrength}%)\nip: {ipaddr}/{cidr}\n⬇ {bandwidthupbits} ⬆ {bandwidthdownbits}",
         "on-click": "iwgtk"
     },
     "bluetooth": {
-      "format": " 󰂲 OFF ",
-      "format-on": "  ON ",
-      "format-connected": " 󰂱 CON ",
+      "format": " 󰂲off ",
+      "format-on": " on ",
+      "format-connected": " 󰂱con ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
