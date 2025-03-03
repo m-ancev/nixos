@@ -94,14 +94,12 @@
         "format-ethernet": "  󰌗 con ",
         "format": "   on ",
         "format-disconnected": "  󰜺 off ",
-        "tooltip-format": " {bandwidthupbits}  {bandwidthdownbits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}mhz\nstrength: {signaldbm}dbm ({signalstrength}%)\nip: {ipaddr}/{cidr}\n⬇ {bandwidthupbits} ⬆ {bandwidthdownbits}",
         "on-click": "iwgtk"
     },
     "bluetooth": {
-      "format": " 󰂲off ",
-      "format-on": " on ",
-      "format-connected": " 󰂱con ",
+      "format": " 󰂲 off ",
+      "format-on": "  on ",
+      "format-connected": " 󰂱 con ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
