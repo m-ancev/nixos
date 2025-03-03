@@ -1,6 +1,6 @@
--- Scroll Page Down / Up
-vim.keymap.set("n", "<C-j>", "<C-d>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-k>", "<C-u>", { noremap = true, silent = true })
+-- Scroll Page Down / Up, doesn't work with tmux
+-- vim.keymap.set("n", "<C-j>", "<C-d>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<C-k>", "<C-u>", { noremap = true, silent = true })
 
 -- Oil Explorer
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle Oil [E]xplorer" })
