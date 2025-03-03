@@ -15,8 +15,6 @@ return {
     local keymap = {
       ["<C-u>"] = function() neoscroll.ctrl_u({ duration = 25 }) end,
       ["<C-d>"] = function() neoscroll.ctrl_d({ duration = 25 }) end,
-      ["<C-k>"] = function() neoscroll.ctrl_u({ duration = 25 }) end,
-      ["<C-j>"] = function() neoscroll.ctrl_d({ duration = 25 }) end,
 
       ["<C-b>"] = function() neoscroll.ctrl_b({ duration = 25 }) end,
       ["<C-f>"] = function() neoscroll.ctrl_f({ duration = 25 }) end,
