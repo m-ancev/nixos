@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      obs-studio # screen / audio recording
       cbonsai # terminal bonsai tree
       angular-language-server # angularls
       bat # replacement for cat
