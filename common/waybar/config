@@ -3,10 +3,10 @@
     "height": 21,
     "spacing": 15,
     "modules-left": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/window"
     ],
     "modules-right": [
         "tray",
@@ -32,22 +32,20 @@
       "urgent-color": "#ff0000",
       "format": "{icon} ",
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "active": "",
-        "default": "" 
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
       },
     },
     "clock": {
-        "format": "  {:%H:%m} ",
+        "format": "  {:%H:%M} ",
         "format-alt": " 󰸗 {:%y-%m-%d} ",
         "actions":  {
           "on-click-right": "mode",
@@ -84,22 +82,22 @@
         ]
     },
     "pulseaudio": {
-        "format": "  {volume}% ",
-        "format-muted": "  off ",
+        "format": "   {volume}% ",
+        "format-muted": "   OFF ",
         "on-click": "pavucontrol"
     },
     "network": {
         "interval": 1,
-        "format-wifi": "  󰖩 con ",
-        "format-ethernet": "  󰌗 con ",
-        "format": "   on ",
-        "format-disconnected": "  󰜺 off ",
+        "format-wifi": "  󰖩 CON ",
+        "format-ethernet": "  󰌗 CON ",
+        "format": "   ON ",
+        "format-disconnected": "  󰜺 OFF ",
         "on-click": "iwgtk"
     },
     "bluetooth": {
-      "format": " 󰂲 off ",
-      "format-on": "  on ",
-      "format-connected": " 󰂱 con ",
+      "format": " 󰂲 OFF ",
+      "format-on": "  ON ",
+      "format-connected": " 󰂱 CON ",
       "tooltip-format": "{device_alias}",
       "on-click": "blueman-manager"
     }
