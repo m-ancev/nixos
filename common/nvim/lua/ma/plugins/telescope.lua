@@ -49,7 +49,12 @@ return {
     vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
     vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
     vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-    
+
+    -- Show hidden file when doing a file search
+    vim.keymap.set("n", "<leader>sf", function()
+      require("telescope.builtin").find_files({ hidden = true })
+    end, { desc = "[S]earch [F]iles" })
+
     -- Add binding to remove entry from buffer view
     vim.keymap.set("n", "<leader><leader>", function()
       builtin.buffers({
