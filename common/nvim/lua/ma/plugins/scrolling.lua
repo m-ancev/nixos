@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   "karb94/neoscroll.nvim",
   config = function()
     local neoscroll = require('neoscroll')
