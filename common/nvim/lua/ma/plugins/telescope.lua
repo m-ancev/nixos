@@ -60,9 +60,11 @@ return {
       builtin.buffers({
         attach_mappings = function(prompt_bufnr, map)
           local delete_buf = function()
-            local selection = require("telescope.actions.state").get_selected_entry()
-            require("telescope.actions").close(prompt_bufnr)
-            vim.api.nvim_buf_delete(selection.bufnr, { force = true })
+            local state = require("telescope.actions.state")
+            local picker = state.get_current_picker(prompt_bufnr)
+            picker:delete_selection(function(selection)
+              vim.api.nvim_buf_delete(selection.bufnr, { force = true })
+            end)
           end
           map("i", "<C-d>", delete_buf)
           map("n", "<C-d>", delete_buf)
@@ -70,7 +72,7 @@ return {
         end,
       })
     end, { desc = "[ ] Find existing buffers" })
-    
+
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set("n", "<leader>/", function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.
