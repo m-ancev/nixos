@@ -2,6 +2,7 @@
 export EDITOR='nvim'
 export TERM='kitty'
 export NIXOS_OZONE_WL=1
+export MANPAGER='nvim +Man!'
 
 # aliases
 alias rebt='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#tower && popd'
