@@ -14,6 +14,7 @@ alias f='yazi'
 alias ..='cd ..'
 alias nv=nvim
 alias tm=tmux
+alias e=exit
 
 # terminal prompt
 if [ "$EUID" -eq 0 ]; then
