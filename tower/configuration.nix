@@ -66,7 +66,7 @@ in
       git
       librewolf
       kitty
-      tldr # Simplified and community-driven man pages
+      tealdeer # Simplified and community-driven man pages
       keepassxc
       unzip # Extracts files from ZIP archives
       ripgrep # Fast command-line search tool (like grep, but faster)
