@@ -7,7 +7,7 @@
 
 window#waybar {
     color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #121212;
 }
 
 button {
@@ -41,4 +41,12 @@ button {
 #workspaces button:hover {
   background: #000000;
   color: #FFFFFF;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+     margin-right: 0;
 }

@@ -30,7 +30,7 @@
       "active-color": "#ffffff",
       "inactive-color": "#888888",
       "urgent-color": "#ff0000",
-      "format": "{icon} ",
+      "format": " {icon} ",
       "format-icons": {
         "1": "1",
         "2": "2",
