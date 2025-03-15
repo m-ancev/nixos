@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      obsidian # notes
       bluetui # bluetooth tui
       brightnessctl
       cbonsai # terminal bonsai tree
