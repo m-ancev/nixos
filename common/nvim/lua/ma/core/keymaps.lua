@@ -2,6 +2,12 @@
 -- vim.keymap.set("n", "<C-j>", "<C-d>", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<C-k>", "<C-u>", { noremap = true, silent = true })
 
+-- Recenter view after using navigation shortcuts
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-f>", "<C-f>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b>", "<C-b>zz", { noremap = true, silent = true })
+
 -- Oil Explorer
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle Oil [E]xplorer" })
 
