@@ -88,10 +88,10 @@
     },
     "network": {
         "interval": 1,
-        "format-wifi": "  󰖩 CON ",
-        "format-ethernet": "  󰌗 CON ",
-        "format": "   ON ",
-        "format-disconnected": "  󰜺 OFF ",
+        "format-wifi": " 󰖩 CON ",
+        "format-ethernet": " 󰌗 CON ",
+        "format": "  ON ",
+        "format-disconnected": " 󰜺 OFF ",
         "on-click": "iwgtk"
     },
     "bluetooth": {

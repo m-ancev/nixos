@@ -50,3 +50,9 @@ button {
 .modules-right > widget:last-child > #workspaces {
      margin-right: 0;
 }
+
+/* This does not work for the left modules namely workspaces and taskbar */
+/* .module:hover { */
+/*     background-color: #888888; */
+/*     color: #121212; */
+/* } */
