@@ -5,8 +5,7 @@ export NIXOS_OZONE_WL=1
 export MANPAGER='nvim +Man!'
 
 # aliases
-alias rebt='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#tower && popd'
-alias rebl='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#laptop && popd'
+alias reb='pushd /home/$USER/nixos/ && sudo nixos-rebuild switch --flake .#$(hostname) && popd'
 alias conf='nvim /home/$USER/nixos/'
 # sudo in interactive mode
 alias esudo='sudo -Es'
