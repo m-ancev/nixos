@@ -117,7 +117,7 @@ in
   boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; 
 
   # Networking
-  networking.hostName = "nixos";
+  networking.hostName = "tower";
   networking.wireless.iwd.enable = true;
   networking.useDHCP = true;
   services.mullvad-vpn.enable = true;
