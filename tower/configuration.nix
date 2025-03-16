@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      glance # dashboard
       obsidian # notes
       bluetui # bluetooth tui
       obs-studio # screen / audio recording

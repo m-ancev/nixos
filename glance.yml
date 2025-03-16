@@ -1,0 +1,85 @@
+server:
+  port: 40302
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: Europe/Berlin
+                label: Berlin
+              - timezone: Asia/Tokyo
+                label: Tokyo
+              - timezone: America/New_York
+                label: New York
+
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: weather
+            location: Stuttgart, Germany
+            units: metric
+            hour-format: 24h
+
+      - size: full
+        widgets:
+
+          - type: search
+            search-engine: duckduckgo
+            new-tab: true
+            bangs:
+              - title: Google
+                shortcut: "!g"
+                url: https://www.google.com/search?q={QUERY}
+
+          - type: bookmarks
+            groups:
+              - links:
+                  - title: Gmail
+                    url: https://mail.google.com/mail/u/0/
+                    hide-arrow: true
+                  - title: Github
+                    url: https://github.com/
+                    hide-arrow: true
+                  - title: Wikipedia
+                    url: https://en.wikipedia.org/
+                    hide-arrow: true
+
+              - links:
+                  - title: Gmail
+                    url: https://mail.google.com/mail/u/0/
+                    hide-arrow: true
+                  - title: Github
+                    url: https://github.com/
+                    hide-arrow: true
+                  - title: Wikipedia
+                    url: https://en.wikipedia.org/
+                    hide-arrow: true
+
+          - type: repository
+            repository: m-ancev/nixos
+            commits-limit: 10
+
+
+
+      - size: small
+        widgets:
+          - type: videos
+            channels:
+              - UCsBjURrPoezykLs9EqgamOA # Fireship
+              - UC-AQKm7HUNMmxjdS371MSwg # Channel 5
+              - UC8ENHE5xdFSwx71u3fDH5Xw # ThePrimeagen
+              - UCUMwY9iS8oMyWDYIe6_RmoA # No Boilerplate
+              - UCW8K3HCkC1p_oevPX3Uegeg # Bandstand
+            style: vertical-list
+
+
+          - type: group
+            widgets:
+              - type: reddit
+                subreddit: unixporn
+                show-thumbnails: true
