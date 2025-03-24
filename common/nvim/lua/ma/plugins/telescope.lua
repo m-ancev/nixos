@@ -18,15 +18,37 @@ return {
     { "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
   },
   config = function()
-    local custom_default = require("telescope.themes").get_ivy({
-      borderchars = {
-        prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+
+    local custom = {
+      entry_prefix = "  ",
+      initial_mode = "insert",
+      selection_strategy = "reset",
+      sorting_strategy = "descending",
+      layout_strategy = "horizontal",
+      layout_config = {
+        horizontal = {
+          prompt_position = "bottom",
+          preview_width = 0.7,
+          results_width = 0.3,
+        },
+        vertical = {
+          mirror = false,
+        },
+        width = { padding = 0 },
+        height = { padding = 0 },
+        preview_cutoff = 120,
       },
-    })
+      border = true,
+      borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+      -- Empty borderchars
+      -- borderchars = { "", "", "", "", "", "", "", "" },
+      color_devicons = false,
+      winblend = 0,
+    }
+
+
     require("telescope").setup({
-      defaults = custom_default,
+      defaults = custom,
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
