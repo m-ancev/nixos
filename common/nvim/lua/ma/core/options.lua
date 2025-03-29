@@ -1,13 +1,5 @@
 -- Set color scheme
--- vim.g.colorscheme = "rose-pine"
 vim.g.colorscheme = "base16-black-metal-gorgoroth"
--- this needs to be enabled for base16 colorschemes inside of tmux
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  end,
-})
 
 -- Enable spell checking
 vim.opt.spell = false
