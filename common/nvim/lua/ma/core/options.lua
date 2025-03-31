@@ -1,6 +1,9 @@
 -- Set color scheme
 vim.g.colorscheme = "base16-black-metal-gorgoroth"
 
+-- Enable transparency
+vim.g.transparent_enabled = false
+
 -- Enable spell checking
 vim.opt.spell = false
 vim.opt.spelllang = "de"
