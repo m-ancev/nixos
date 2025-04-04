@@ -14,6 +14,7 @@ in
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   environment.systemPackages = with pkgs; [
+      pdfarranger # pdf tools
       glance # dashboard
       obsidian # notes
       bluetui # bluetooth tui
