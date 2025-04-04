@@ -18,15 +18,37 @@ return {
     { "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
   },
   config = function()
-    local custom_default = require("telescope.themes").get_ivy({
-      borderchars = {
-        prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+
+    local custom = {
+      entry_prefix = "  ",
+      initial_mode = "insert",
+      selection_strategy = "reset",
+      sorting_strategy = "descending",
+      layout_strategy = "horizontal",
+      layout_config = {
+        horizontal = {
+          prompt_position = "bottom",
+          preview_width = 0.7,
+          results_width = 0.3,
+        },
+        vertical = {
+          mirror = false,
+        },
+        width = { padding = 0 },
+        height = { padding = 0 },
+        preview_cutoff = 120,
       },
-    })
+      border = true,
+      borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+      -- Empty borderchars
+      -- borderchars = { "", "", "", "", "", "", "", "" },
+      color_devicons = false,
+      winblend = 0,
+    }
+
+
     require("telescope").setup({
-      defaults = custom_default,
+      defaults = custom,
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
@@ -100,5 +122,56 @@ return {
     -- vim.keymap.set("n", "<leader>sn", function()
     --   builtin.find_files({ cwd = vim.fn.stdpath("config") })
     -- end, { desc = "[S]earch [N]eovim files" })
+
+    -- Preview colorscheme from Telescope
+    local actions = require("telescope.actions")
+    local action_state = require("telescope.actions.state")
+
+    local function custom_colorscheme_picker()
+      require("telescope.builtin").colorscheme({
+        layout_strategy = "bottom_pane",    -- Use the bottom pane layout
+        layout_config = {
+          height = 0.5,                   -- Occupy the lower half of the screen
+          preview_cutoff = 40,            -- Adjust as needed for your display
+        },
+        attach_mappings = function(prompt_bufnr, map)
+          local function update_preview()
+            local selection = action_state.get_selected_entry()
+            if selection and selection.value then
+              vim.cmd("colorscheme " .. selection.value)
+            end
+          end
+
+          -- Override navigation keys to update preview dynamically
+          map("i", "<Down>", function()
+            actions.move_selection_next(prompt_bufnr)
+            update_preview()
+          end)
+          map("i", "<Up>", function()
+            actions.move_selection_previous(prompt_bufnr)
+            update_preview()
+          end)
+          map("i", "<C-j>", function()
+            actions.move_selection_next(prompt_bufnr)
+            update_preview()
+          end)
+          map("i", "<C-k>", function()
+            actions.move_selection_previous(prompt_bufnr)
+            update_preview()
+          end)
+          map("i", "<C-n>", function()
+            actions.move_selection_next(prompt_bufnr)
+            update_preview()
+          end)
+          map("i", "<C-p>", function()
+            actions.move_selection_previous(prompt_bufnr)
+            update_preview()
+          end)
+          return true
+        end,
+      })
+    end
+
+    vim.keymap.set("n", "<leader>st", custom_colorscheme_picker, { desc = "[S]earch [T]eme" })
   end,
 }

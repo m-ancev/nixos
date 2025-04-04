@@ -25,8 +25,5 @@ return {
     require('transparent').clear_prefix('Lualine')
     require('transparent').clear_prefix('Gitsigns')
     require('transparent').clear_prefix('Todo')
-
-    -- Enable transparency
-    vim.cmd('TransparentEnable')
   end,
 }

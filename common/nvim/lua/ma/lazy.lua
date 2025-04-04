@@ -12,4 +12,13 @@ require("lazy").setup("ma.plugins", {
     notify = false,
   },
 })
+
+-- Set colorscheme according to what was defined in `options.lua`
 vim.cmd.colorscheme(vim.g.colorscheme)
+
+-- Set transparency according to what was defined in `options.lua`
+if vim.g.transparent_enabled then
+  vim.cmd('TransparentEnable')
+else
+  vim.cmd('TransparentDisable')
+end
