@@ -83,6 +83,8 @@ return {
       mapping = {
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
         -- This mapping conflicts with tmux
         -- ['<C-Space>'] = cmp.mapping.complete(),

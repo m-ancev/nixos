@@ -19,11 +19,11 @@ return {
   },
   config = function()
 
+    local actions = require("telescope.actions")
     local custom = {
       entry_prefix = "  ",
       initial_mode = "insert",
       selection_strategy = "reset",
-      sorting_strategy = "descending",
       layout_strategy = "horizontal",
       layout_config = {
         horizontal = {
@@ -44,6 +44,16 @@ return {
       -- borderchars = { "", "", "", "", "", "", "", "" },
       color_devicons = false,
       winblend = 0,
+      mappings = {
+        i = {
+          ["<C-j>"] = actions.move_selection_next,
+          ["<C-k>"] = actions.move_selection_previous,
+        },
+        n = {
+          ["<C-j>"] = actions.move_selection_next,
+          ["<C-k>"] = actions.move_selection_previous,
+        }
+      }
     }
 
 
