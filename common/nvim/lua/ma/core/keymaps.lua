@@ -1,7 +1,3 @@
--- Scroll Page Down / Up, doesn't work with tmux
--- vim.keymap.set("n", "<C-j>", "<C-d>", { noremap = true, silent = true })
--- vim.keymap.set("n", "<C-k>", "<C-u>", { noremap = true, silent = true })
-
 -- Recenter view after using navigation shortcuts
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
@@ -24,15 +20,12 @@ vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force [Q]uit" })
 vim.keymap.set("n", "<leader>a", ":Alpha<CR>", { desc = "Toggle [A]lpha" })
 
 -- Buffer management
-vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Open buffer next", noremap = true, silent = true })
-vim.keymap.set("n", "<leader><S-Tab>", ":bprev<CR>", { desc = "Open buffer previous", noremap = true, silent = true })
-vim.keymap.set("n", "<leader>K", ":bd<CR>", { desc = "[K]ill buffer", noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Open buffer next", noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader><S-Tab>", ":bprev<CR>", { desc = "Open buffer previous", noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>K", ":bd<CR>", { desc = "[K]ill buffer", noremap = true, silent = true })
 
 -- Format buffer
 vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, { desc = "Format buffer" })
-
--- Bufferline keymaps
-vim.keymap.set("n", "gb", ":BufferLinePick<CR>", { desc = "Toggle BufferLinePick", noremap = true, silent = true })
 
 -- Clear highlight search on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
