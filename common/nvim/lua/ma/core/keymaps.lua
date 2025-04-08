@@ -19,11 +19,6 @@ vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force [Q]uit" })
 -- Alpha Start Page
 vim.keymap.set("n", "<leader>a", ":Alpha<CR>", { desc = "Toggle [A]lpha" })
 
--- Buffer management
--- vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Open buffer next", noremap = true, silent = true })
--- vim.keymap.set("n", "<leader><S-Tab>", ":bprev<CR>", { desc = "Open buffer previous", noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>K", ":bd<CR>", { desc = "[K]ill buffer", noremap = true, silent = true })
-
 -- Format buffer
 vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, { desc = "Format buffer" })
 
