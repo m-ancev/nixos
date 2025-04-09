@@ -18,7 +18,6 @@ return {
     { "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
   },
   config = function()
-
     local actions = require("telescope.actions")
     local custom = {
       entry_prefix = "  ",
@@ -72,15 +71,38 @@ return {
 
     -- See `:help telescope.builtin`
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
     vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-    vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
     vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
     vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
     vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
     vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
     vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
     vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+
+    -- Open help page in full screen buffer
+    vim.keymap.set("n", "<leader>sh", function()
+      require("telescope.builtin").help_tags({
+        attach_mappings = function(prompt_bufnr, map)
+          local action_state = require("telescope.actions.state")
+          actions.select_default:replace(function()
+            local selection = action_state.get_selected_entry()
+            actions.close(prompt_bufnr)
+            vim.cmd("help " .. selection.value .. " | only")
+          end)
+          return true
+        end,
+      })
+    end, { desc = "[S]earch [H]elp" })
+
+    -- autocmd to make help buffer listed for telescope navigation
+    vim.api.nvim_create_augroup("ListHelpBuffers", { clear = true })
+    vim.api.nvim_create_autocmd("FileType", {
+      group = "ListHelpBuffers",
+      pattern = "help",
+      callback = function()
+        vim.bo.buflisted = true
+      end,
+    })
 
     -- Show hidden file when doing a file search
     vim.keymap.set("n", "<leader>sf", function()
@@ -134,15 +156,14 @@ return {
     -- end, { desc = "[S]earch [N]eovim files" })
 
     -- Preview colorscheme from Telescope
-    local actions = require("telescope.actions")
     local action_state = require("telescope.actions.state")
 
     local function custom_colorscheme_picker()
       require("telescope.builtin").colorscheme({
-        layout_strategy = "bottom_pane",    -- Use the bottom pane layout
+        layout_strategy = "bottom_pane", -- Use the bottom pane layout
         layout_config = {
-          height = 0.5,                   -- Occupy the lower half of the screen
-          preview_cutoff = 40,            -- Adjust as needed for your display
+          height = 0.5,                  -- Occupy the lower half of the screen
+          preview_cutoff = 40,           -- Adjust as needed for your display
         },
         attach_mappings = function(prompt_bufnr, map)
           local function update_preview()
