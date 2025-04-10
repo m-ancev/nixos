@@ -1,8 +1,11 @@
 -- Set color scheme
-vim.g.colorscheme = "base16-black-metal-gorgoroth"
+vim.g.colorscheme = "base16-gruvbox-light-hard"
 
 -- Enable transparency
 vim.g.transparent_enabled = false
+
+-- Enable dark mode (set false if light theme)
+vim.g.background_dark_mode = false
 
 -- Enable spell checking
 vim.opt.spell = false

@@ -60,6 +60,50 @@ return {
         gitsigns.toggle_current_line_blame,
         { desc = "toggle current line blame" }
       )
+
+    -- fix background color
+    local function update_git_signs_bg()
+      local line_number_bg = vim.api.nvim_get_hl_by_name("LineNr", true).background
+
+      local gitsigns_highlights = {
+        GitSignsAdd = { bg = line_number_bg },
+        GitSignsChange = { bg = line_number_bg },
+        GitSignsDelete = { bg = line_number_bg },
+        GitSignsAddNr = { bg = line_number_bg },
+        GitSignsChangeNr = { bg = line_number_bg },
+        GitSignsDeleteNr = { bg = line_number_bg },
+        GitSignsAddLn = { bg = line_number_bg },
+        GitSignsChangeLn = { bg = line_number_bg },
+        GitSignsDeleteLn = { bg = line_number_bg },
+        GitSignsAddCul = { bg = line_number_bg },
+        GitSignsChangeCul = { bg = line_number_bg },
+        GitSignsDeleteCul = { bg = line_number_bg },
+        GitSignsAddInline = { bg = line_number_bg },
+        GitSignsChangeInline = { bg = line_number_bg },
+        GitSignsDeleteInline = { bg = line_number_bg },
+        GitSignsAddLnInline = { bg = line_number_bg },
+        GitSignsChangeLnInline = { bg = line_number_bg },
+        GitSignsDeleteLnInline = { bg = line_number_bg },
+        GitSignsAddVirtLnInline = { bg = line_number_bg },
+        GitSignsChangeVirtLnInline = { bg = line_number_bg },
+        GitSignsDeleteVirtLnInline = { bg = line_number_bg },
+      }
+
+      -- iterate through table of highlight groups
+      for group, attrs in pairs(gitsigns_highlights) do
+        vim.api.nvim_set_hl(0, group, attrs)
+      end
+    end
+
+    -- autocmd to update on colorscheme change
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      pattern = "*",
+      callback = update_git_signs_bg,
+    })
+
+    -- initial call
+    update_git_signs_bg()
+
     end,
   }
 }

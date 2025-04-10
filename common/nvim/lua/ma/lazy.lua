@@ -22,3 +22,10 @@ if vim.g.transparent_enabled then
 else
   vim.cmd('TransparentDisable')
 end
+
+if vim.g.background_dark_mode then
+    vim.cmd('set background=dark')
+else
+    vim.cmd('set background=light')
+end
+
