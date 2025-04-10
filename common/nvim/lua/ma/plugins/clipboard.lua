@@ -39,15 +39,20 @@ return {
                 telescope = {
                     i = {
                         paste = "<cr>",
+                        paste_behind = "<s-cr>",
                         delete = "<c-d>",
                         edit = "<c-e>",
                         custom = {},
+                        move_selection_next = "C-j",
+                        move_selection_previous = "C-k",
                     },
                     n = {
                         paste = "<cr>",
                         delete = "d",
                         edit = "e",
                         custom = {},
+                        move_selection_next = "C-j",
+                        move_selection_previous = "C-k",
                     },
                 },
             },
