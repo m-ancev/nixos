@@ -1,4 +1,5 @@
 return {
-  "rose-pine/neovim",
-  "chriskempson/base16-vim",
+    "rose-pine/neovim",
+    "chriskempson/base16-vim",
+    "EdenEast/nightfox.nvim"
 }
