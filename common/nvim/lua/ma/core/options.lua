@@ -1,11 +1,11 @@
 -- Set color scheme
-vim.g.colorscheme = "base16-gruvbox-light-hard"
+vim.g.colorscheme = "nordfox"
 
 -- Enable transparency
 vim.g.transparent_enabled = false
 
 -- Enable dark mode (set false if light theme)
-vim.g.background_dark_mode = false
+vim.g.background_dark_mode = true
 
 -- Enable spell checking
 vim.opt.spell = false
