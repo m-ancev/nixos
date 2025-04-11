@@ -77,7 +77,7 @@ return {
         vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "grep" })
         vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "diagnostics" })
         vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "resume" })
-        vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = 'recent' })
+        vim.keymap.set("n", "<leader>so", builtin.oldfiles, { desc = 'old' })
 
         -- Open help page in full screen buffer
         vim.keymap.set("n", "<leader>sh", function()
