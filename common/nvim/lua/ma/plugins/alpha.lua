@@ -29,13 +29,13 @@ return {
     -- }
     dashboard.section.header.val = {}
     dashboard.section.buttons.val = {
-      dashboard.button("e", "  FILE EXPLORER", ":Oil<CR>"),
-      dashboard.button("s", "󰈞  SEARCH FILE", ":Telescope find_files<CR>"),
-      dashboard.button("r", "󰁯  SELECT SESSION TO RESTORE", ":lua require('persistence').select()<CR>"),
-      dashboard.button("p", "󰦛  RESTORE PREVIOUS SESSION", ":lua require('persistence').load({ last = true })<CR>"),
-      dashboard.button("l", "󰒲  LAZY", ":Lazy<CR>"),
-      dashboard.button("m", "  MASON", ":Mason<CR>"),
-      dashboard.button("q", "󰈆  QUIT NVIM", ":qa<CR>"),
+      -- dashboard.button("e", "explorer", ":Oil<CR>"),
+      dashboard.button("e", "explorer", ":lua MiniFiles.open()<CR>"),
+      dashboard.button("s", "search files", ":Telescope find_files<CR>"),
+      dashboard.button("p", "restore session", ":lua require('persistence').load({ last = true })<CR>"),
+      dashboard.button("l", "lazy", ":Lazy<CR>"),
+      dashboard.button("m", "mason", ":Mason<CR>"),
+      dashboard.button("q", "quit", ":qa<CR>"),
     }
     alpha.setup(dashboard.config)
   end,

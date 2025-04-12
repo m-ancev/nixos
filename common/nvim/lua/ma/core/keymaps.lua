@@ -10,7 +10,8 @@ vim.keymap.set("n", "^", "<C-h>", { noremap = true, silent = true })
 vim.keymap.set("n", "%", "<C-l>", { noremap = true, silent = true })
 
 -- Oil Explorer
-vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "explorer" })
+-- vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "explorer" })
+vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "explorer" })
 
 -- Write All
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "write" })
