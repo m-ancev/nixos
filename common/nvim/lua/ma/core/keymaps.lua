@@ -5,12 +5,17 @@ vim.keymap.set("n", "<C-f>", "<C-f>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-b>", "<C-b>zz", { noremap = true, silent = true })
 
 -- Jump to start of line
-vim.keymap.set("n", "^", "<C-h>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-h>", "^", { noremap = true, silent = true })
 -- Jump to end of line
-vim.keymap.set("n", "%", "<C-l>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", "$", { noremap = true, silent = true })
+-- Half page down
+vim.keymap.set("n", "<C-j>", "<C-d>zz", { noremap = true, silent = true })
+-- Half page up
+vim.keymap.set("n", "<C-k>", "<C-u>zz", { noremap = true, silent = true })
 
 -- Oil Explorer
 -- vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "explorer" })
+-- MiniFiles Explorer
 vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "explorer" })
 
 -- Write All

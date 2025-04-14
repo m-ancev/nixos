@@ -7,9 +7,9 @@ return {
     "TmuxNavigateRight",
   },
   keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+    { "<c-s-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+    { "<c-s-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+    { "<c-s-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+    { "<c-s-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
   },
 }

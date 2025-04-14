@@ -117,7 +117,7 @@ return {
                 prompt_position = "bottom",
                 sorting_strategy = "descending",
                 layout_config = {
-                    anchor = "CENTER",
+                    anchor = "CENTER", -- CENTER, S, E, SE, etc.
                     width = 0.5,
                     height = 0.4,
                 },
