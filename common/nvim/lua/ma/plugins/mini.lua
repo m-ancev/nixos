@@ -19,7 +19,8 @@ return {
 
         require("mini.files").setup({
             mappings = {
-                close = '<ESC>',
+                close = 'q',
+                synchronize = '<leader>w',
             },
         })
 
