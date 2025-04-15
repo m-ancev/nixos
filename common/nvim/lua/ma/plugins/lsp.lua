@@ -33,6 +33,12 @@ return {
             require("lspconfig")[lsp].setup({ capabilities = capabilities })
         end
 
+        -- Powershell setup
+        require('lspconfig').powershell_es.setup({
+            cmd = { "powershell", "-NoLogo", "-NonInteractive", "-Command", "Import-Module PowerShellEditorServices; Start-EditorServices" },
+            capabilities = capabilities,
+        })
+
         -- auto commands for lsp
         vim.api.nvim_create_autocmd('lspattach', {
             callback = function(args)
