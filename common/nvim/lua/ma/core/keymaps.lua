@@ -13,6 +13,10 @@ vim.keymap.set("n", "<C-j>", "<C-d>zz", { noremap = true, silent = true })
 -- Half page up
 vim.keymap.set("n", "<C-k>", "<C-u>zz", { noremap = true, silent = true })
 
+-- Buffer Management
+vim.keymap.set("n", "<leader><Tab>", ":bn<CR>", { desc = "buffer next" })
+vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>", { desc = "buffer previous" })
+
 -- Oil Explorer
 -- vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "explorer" })
 -- MiniFiles Explorer
