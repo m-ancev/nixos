@@ -13,14 +13,14 @@ return {
 
         -- Document existing key chains
         require("which-key").add({
-            { "<leader>s",  group = "search" },
-            { "<leader>s_", hidden = true },
+            { "<leader>s",   group = "search" },
+            { "<leader>s_",  hidden = true },
 
-            { "<leader>t",  group = "theme" },
-            { "<leader>t_", hidden = true },
+            { "<leader>t",   group = "theme" },
+            { "<leader>t_",  hidden = true },
 
-            { "<leader>v",  group = "lsp" },
-            { "<leader>v_", hidden = true },
+            { "<leader>v",   group = "lsp" },
+            { "<leader>v_",  hidden = true },
 
             { "<leader>vc",  group = "code" },
             { "<leader>vc_", hidden = true },
@@ -28,8 +28,8 @@ return {
             { "<leader>vr",  group = "rename" },
             { "<leader>vr_", hidden = true },
 
-            { "<leader>g",  group = "git" },
-            { "<leader>g_", hidden = true },
+            { "<leader>g",   group = "git" },
+            { "<leader>g_",  hidden = true },
         })
     end,
 }

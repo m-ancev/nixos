@@ -20,7 +20,7 @@ vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>", { desc = "buffer previous" })
 -- Oil Explorer
 -- vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "explorer" })
 -- MiniFiles Explorer
-vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "explorer" })
+-- vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "explorer" })
 
 -- Write All
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = "write" })
