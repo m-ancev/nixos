@@ -112,15 +112,6 @@ return {
         -- Add binding to remove entry from buffer view
         vim.keymap.set("n", "<leader><leader>", function()
             builtin.buffers({
-                theme = "dropdown",
-                previewer = false,
-                prompt_position = "bottom",
-                sorting_strategy = "descending",
-                layout_config = {
-                    anchor = "CENTER", -- CENTER, S, E, SE, etc.
-                    width = 0.5,
-                    height = 0.4,
-                },
                 attach_mappings = function(prompt_bufnr, map)
                     local delete_buf = function()
                         local state = require("telescope.actions.state")
