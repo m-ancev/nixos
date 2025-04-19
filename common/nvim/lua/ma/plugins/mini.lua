@@ -17,23 +17,23 @@ return {
         -- - sr)'  - [S]urround [R]eplace [)] [']
         require("mini.surround").setup({})
 
-        require("mini.files").setup({
-            mappings = {
-                close       = '<ESC>',
-                go_in       = 'l',
-                go_in_plus  = '<CR>',
-                go_out      = 'h',
-                go_out_plus = 'H',
-                mark_goto   = "'",
-                mark_set    = 'm',
-                reset       = '<BS>',
-                reveal_cwd  = '@',
-                show_help   = 'g?',
-                synchronize = '<leader>w',
-                trim_left   = '<',
-                trim_right  = '>',
-            },
-        })
+        -- require("mini.files").setup({
+        --     mappings = {
+        --         close       = '<ESC>',
+        --         go_in       = 'l',
+        --         go_in_plus  = '<CR>',
+        --         go_out      = 'h',
+        --         go_out_plus = 'H',
+        --         mark_goto   = "'",
+        --         mark_set    = 'm',
+        --         reset       = '<BS>',
+        --         reveal_cwd  = '@',
+        --         show_help   = 'g?',
+        --         synchronize = '<leader>w',
+        --         trim_left   = '<',
+        --         trim_right  = '>',
+        --     },
+        -- })
 
         -- Cursor animations, duration [ms]
         -- local animate = require 'mini.animate'
