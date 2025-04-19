@@ -1,14 +1,24 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        'hrsh7th/nvim-cmp',
-        'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'rafamadriz/friendly-snippets',
-        'L3MON4D3/LuaSnip',
-        'saadparwaiz1/cmp_luasnip',
+        -- LSP management
         "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+
+        -- completion engine + LSP source
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
+
+        -- extra completion sources
+        "hrsh7th/cmp-buffer", -- buffer‑based completions
+        "hrsh7th/cmp-path", -- filesystem path completions
+
+        -- snippet engine + community snippets
+        "L3MON4D3/LuaSnip",
+        "rafamadriz/friendly-snippets",
+        "saadparwaiz1/cmp_luasnip",
+
+        -- lua uv completions
         {
             "folke/lazydev.nvim",
             ft = "lua",
@@ -20,52 +30,42 @@ return {
         },
     },
     config = function()
-        local servers = {
-            "lua_ls",
-            "gopls",
-        }
-
-        -- Capabilities for LSP servers
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-        -- set up lsp servers
-        for _, lsp in ipairs(servers) do
-            require("lspconfig")[lsp].setup({ capabilities = capabilities })
-        end
-
-        -- Powershell setup
-        require('lspconfig').powershell_es.setup({
-            cmd = { "powershell", "-NoLogo", "-NonInteractive", "-Command", "Import-Module PowerShellEditorServices; Start-EditorServices" },
-            capabilities = capabilities,
+        -- 1) mason + mason-lspconfig
+        require("mason").setup()
+        require("mason-lspconfig").setup({
+            ensure_installed = { "lua_ls", "gopls" },
+            automatic_installation = true,
         })
 
-        -- auto commands for lsp
-        vim.api.nvim_create_autocmd('lspattach', {
-            callback = function(args)
-                local client = vim.lsp.get_client_by_id(args.data.client_id)
-                if not client then return end
+        -- 2) capabilities & on_attach
+        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+        local capabilities = cmp_nvim_lsp.default_capabilities()
 
-                local bufnr = args.buf
-                local opts = { buffer = bufnr, remap = false }
+        local on_attach = function(client, bufnr)
+            local wk = vim.keymap.set
+            local opts = { buffer = bufnr, silent = true }
+            wk("n", "gd", vim.lsp.buf.definition, opts)
+            wk("n", "gr", vim.lsp.buf.references, opts)
+            wk("n", "<leader>vr", vim.lsp.buf.rename, opts)
+            wk("n", "<leader>vc", vim.lsp.buf.code_action, opts)
+            vim.lsp.handlers["textDocument/hover"] =
+                vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+            wk("n", "K", vim.lsp.buf.hover, opts)
+        end
 
-                vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "references" })
-                vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "definition" })
-                vim.keymap.set("n", "<leader>vc", vim.lsp.buf.code_action, { desc = "code action" })
-                vim.keymap.set("n", "<leader>vr", vim.lsp.buf.rename, { desc = "rename" })
-
-                -- Override the default hover handler with a border setting:
-                vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-                    vim.lsp.handlers.hover, {
-                        border = "single",
-                    }
-                )
-                vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        -- 3) auto‑setup of all servers via mason-lspconfig handlers
+        require("mason-lspconfig").setup_handlers({
+            function(server_name)
+                require("lspconfig")[server_name].setup({
+                    on_attach    = on_attach,
+                    capabilities = capabilities,
+                })
             end,
         })
 
-        -- set up nvim-cmp
-        local cmp = require('cmp')
-        local luasnip = require('luasnip')
+        -- 4) nvim-cmp + snippets
+        local cmp     = require("cmp")
+        local luasnip = require("luasnip")
 
         require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -75,26 +75,22 @@ return {
                     luasnip.lsp_expand(args.body)
                 end,
             },
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
+            mapping = {
+                ["<C-j>"] = cmp.mapping.select_next_item(),
+                ["<C-k>"] = cmp.mapping.select_prev_item(),
+                ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                -- ["<C-Space>"] = cmp.mapping.complete(),  -- manual trigger (uncomment if you want)
             },
             sources = {
-                { name = 'nvim_lsp' },
-                { name = 'luasnip' },
-                { name = 'buffer' },
-                { name = 'path' },
+                { name = "nvim_lsp" },
+                { name = "buffer" },
+                { name = "path" },
+                { name = "luasnip" },
             },
-            mapping = {
-                ['<C-j>'] = cmp.mapping.select_next_item(),
-                ['<C-k>'] = cmp.mapping.select_prev_item(),
-                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-                -- This mapping conflicts with tmux
-                -- ['<C-Space>'] = cmp.mapping.complete(),
+            window = {
+                completion    = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
             },
         })
-
-        -- mason for docker env
-        require("mason").setup()
     end,
 }
