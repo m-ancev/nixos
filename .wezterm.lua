@@ -13,6 +13,7 @@ config.font_size = 13.0
 
 -- Color scheme
 config.color_scheme = 'Black Metal (Gorgoroth) (base16)'
+-- config.color_scheme = 'Brewer (light) (terminal.sexy)'
 
 -- Default program (PowerShell on Windows)
 config.default_prog = {"powershell.exe", "-NoLogo"}
