@@ -82,7 +82,7 @@ return {
     -- the type of border to use for the floating window. Can be many values,
     -- including 'none', 'rounded', 'single', 'double', 'shadow', etc. For
     -- more information, see :h nvim_open_win
-    yazi_floating_window_border = "single",
+    yazi_floating_window_border = "none",
 
     -- some yazi.nvim commands copy text to the clipboard. This is the register
     -- yazi.nvim should use for copying. Defaults to "*", the system clipboard
